@@ -50,10 +50,13 @@
             // 
             // label2
             // 
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
             this.label2.MouseHover += new System.EventHandler(this.label2_MouseHover);
+            // 
+            // fHide
+            // 
+            this.fHide.Click += new System.EventHandler(this.fHide_Click);
             // 
             // label3
             // 
@@ -97,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 530);
+            //this.ClientSize = new System.Drawing.Size(876, 530);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);

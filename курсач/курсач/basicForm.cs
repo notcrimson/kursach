@@ -21,5 +21,32 @@ namespace курсач
         {
 
         }
+
+        public void HideForm()
+        {
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+        }
+        public void ExitApplication()
+        {
+            DialogResult res = MessageBox.Show("Are you sure you want to exit", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (res == DialogResult.OK)
+            {
+                Application.Exit();  
+            }            
+        }
+
+        public void label2_MouseHover(object sender, EventArgs e)
+        {
+            label2.BackColor = Color.DarkRed;
+        }
+
+        private void label2_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+        public void MouseH()
+        {
+            //label2_MouseHover(sender,e);
+        }
     }
 }

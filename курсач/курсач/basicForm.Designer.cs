@@ -30,11 +30,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.fHide = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -42,13 +43,42 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.OliveDrab;
+            this.panel1.Controls.Add(this.fHide);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(876, 52);
+            this.panel1.Size = new System.Drawing.Size(899, 52);
             this.panel1.TabIndex = 0;
+            // 
+            // fHide
+            // 
+            this.fHide.AutoSize = true;
+            this.fHide.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.fHide.ForeColor = System.Drawing.Color.Black;
+            this.fHide.Location = new System.Drawing.Point(842, -2);
+            this.fHide.Name = "fHide";
+            this.fHide.Size = new System.Drawing.Size(28, 23);
+            this.fHide.TabIndex = 2;
+            this.fHide.Text = "—";
+            this.fHide.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Red;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(870, -1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 22);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "X";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
+            this.label2.MouseHover += new System.EventHandler(this.label2_MouseHover);
             // 
             // label1
             // 
@@ -67,9 +97,9 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.Back);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 480);
+            this.panel2.Location = new System.Drawing.Point(0, 490);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(876, 50);
+            this.panel2.Size = new System.Drawing.Size(899, 50);
             this.panel2.TabIndex = 1;
             // 
             // button1
@@ -92,25 +122,11 @@
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Red;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(799, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 26);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Exit";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // basicForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(876, 530);
+            this.ClientSize = new System.Drawing.Size(899, 540);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -135,5 +151,6 @@
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Panel panel2;
         protected System.Windows.Forms.Label label2;
+        protected System.Windows.Forms.Label fHide;
     }
 }

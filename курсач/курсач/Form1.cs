@@ -24,7 +24,7 @@ namespace курсач
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            ExitApplication();
         }
 
         private void label2_MouseHover(object sender, EventArgs e)
@@ -35,6 +35,11 @@ namespace курсач
         private void label2_MouseLeave(object sender, EventArgs e)
         {
             label2.BackColor = Color.Red;
+        }
+
+        private void fHide_Click(object sender, EventArgs e)
+        {
+            HideForm();
         }
     }
 }

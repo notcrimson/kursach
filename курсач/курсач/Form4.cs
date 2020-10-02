@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace курсач
 {
-    public partial class Form3 : basicForm
+    public partial class Form4 : basicForm
     {
-        public Form3()
+        public Form4()
         {
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void Form4_Load(object sender, EventArgs e)
         {
 
         }
