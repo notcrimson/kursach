@@ -62,6 +62,9 @@
             this.fHide.TabIndex = 2;
             this.fHide.Text = "—";
             this.fHide.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.fHide.Click += new System.EventHandler(this.fHide_Click);
+            this.fHide.MouseLeave += new System.EventHandler(this.fHide_MouseLeave);
+            this.fHide.MouseHover += new System.EventHandler(this.fHide_MouseHover);
             // 
             // label2
             // 
@@ -76,6 +79,7 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "X";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
             this.label2.MouseHover += new System.EventHandler(this.label2_MouseHover);
             // 

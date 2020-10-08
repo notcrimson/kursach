@@ -33,7 +33,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //  
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(218, 205);
@@ -54,9 +54,9 @@
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.ClientSize = new System.Drawing.Size(899, 540);
+            this.ClientSize = new System.Drawing.Size(899, 540);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Name = "Form3";

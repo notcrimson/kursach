@@ -67,6 +67,8 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model1.cs" />
+    <Compile Include="Professional_unit.cs" />
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +83,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="Student_profile.cs" />
+    <Compile Include="sysdiagram.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="Test_correct_answer.cs" />
     <Compile Include="Typing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +100,7 @@
     <Compile Include="Units.Designer.cs">
       <DependentUpon>Units.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="basicForm.resx">
       <DependentUpon>basicForm.cs</DependentUpon>
     </EmbeddedResource>

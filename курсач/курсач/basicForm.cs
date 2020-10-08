@@ -22,19 +22,6 @@ namespace курсач
 
         }
 
-        public void HideForm()
-        {
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
-        }
-        public void ExitApplication()
-        {
-            DialogResult res = MessageBox.Show("Are you sure you want to exit", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (res == DialogResult.OK)
-            {
-                Application.Exit();  
-            }            
-        }
-
         public void label2_MouseHover(object sender, EventArgs e)
         {
             label2.BackColor = Color.DarkRed;
@@ -42,11 +29,35 @@ namespace курсач
 
         private void label2_MouseLeave(object sender, EventArgs e)
         {
-
+            label2.BackColor = Color.Red;
         }
         public void MouseH()
         {
             //label2_MouseHover(sender,e);
+        }
+
+        private void fHide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Are you sure you want to exit", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (res == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void fHide_MouseHover(object sender, EventArgs e)
+        {
+            fHide.BackColor = Color.Khaki;
+        }
+
+        private void fHide_MouseLeave(object sender, EventArgs e)
+        {
+            fHide.BackColor = Color.OliveDrab;
         }
     }
 }

@@ -53,17 +53,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.SetChildIndex(this.Back, 0);
             this.panel2.Controls.SetChildIndex(this.button1, 0);
-            // 
-            // label2
-            // 
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
-            this.label2.MouseHover += new System.EventHandler(this.label2_MouseHover);
-            // 
-            // fHide
-            // 
-            this.fHide.Click += new System.EventHandler(this.fHide_Click);
-            // 
+            //  
             // label3
             // 
             this.label3.AutoSize = true;
