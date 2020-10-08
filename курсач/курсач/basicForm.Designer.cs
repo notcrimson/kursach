@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,9 +56,9 @@
             this.fHide.AutoSize = true;
             this.fHide.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.fHide.ForeColor = System.Drawing.Color.Black;
-            this.fHide.Location = new System.Drawing.Point(842, -2);
+            this.fHide.Location = new System.Drawing.Point(842, -3);
             this.fHide.Name = "fHide";
-            this.fHide.Size = new System.Drawing.Size(28, 23);
+            this.fHide.Size = new System.Drawing.Size(31, 24);
             this.fHide.TabIndex = 2;
             this.fHide.Text = "—";
             this.fHide.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -94,23 +93,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.OliveDrab;
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.Back);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 490);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(899, 50);
             this.panel2.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(747, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Menu";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Back
             // 
@@ -129,7 +117,7 @@
             this.ClientSize = new System.Drawing.Size(899, 540);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.DarkGreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -146,7 +134,6 @@
 
         #endregion
         protected System.Windows.Forms.Label label1;
-        protected System.Windows.Forms.Button button1;
         protected System.Windows.Forms.Button Back;
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Panel panel2;
