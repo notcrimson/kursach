@@ -53,7 +53,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.SetChildIndex(this.Back, 0);
             this.panel2.Controls.SetChildIndex(this.button1, 0);
-            //  
+            // 
             // label3
             // 
             this.label3.AutoSize = true;

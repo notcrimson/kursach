@@ -21,5 +21,13 @@ namespace курсач
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            previousForm = this;
+            this.Hide();
+            Units pu = new Units();
+            pu.Show();
+        }
     }
 }

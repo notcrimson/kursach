@@ -13,9 +13,8 @@ namespace курсач
     public partial class Login : basicForm
     {
         public static User USER { get; set; }
-        public static Login LOGINFORM { get; set; }
 
-        Model1 db = new Model1();
+        
 
         public Login()
         {
@@ -33,7 +32,7 @@ namespace курсач
             if ((usr != null) && (usr.Password == textBox2.Text))
             {
                 USER = usr;
-                LOGINFORM = this;
+                previousForm = this;
 
                 if (usr.Role == "admin")
                 {

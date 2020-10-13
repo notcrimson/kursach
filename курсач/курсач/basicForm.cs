@@ -12,6 +12,10 @@ namespace курсач
 {
     public partial class basicForm : Form
     {
+        public static Model1 db = new Model1();
+        public static Form previousForm { get; set; }
+        public string path = Environment.CurrentDirectory.ToString() + @"\PUs\";
+        public static  string selectedItem;
         public basicForm()
         {
             InitializeComponent();
@@ -58,6 +62,13 @@ namespace курсач
         private void fHide_MouseLeave(object sender, EventArgs e)
         {
             fHide.BackColor = Color.OliveDrab;
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            previousForm.Show();
+            previousForm = this;
         }
     }
 }
