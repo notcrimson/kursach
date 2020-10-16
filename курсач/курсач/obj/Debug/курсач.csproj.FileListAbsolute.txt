@@ -38,7 +38,6 @@ C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\
 C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\курсач\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\курсач\bin\Debug\EntityFramework.xml
 C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\курсач\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.csprojAssemblyReference.cache
 C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.basicForm.resources
 C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.Login.resources
 C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.Register.resources
@@ -54,3 +53,4 @@ C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\
 C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.csproj.ResolveComReference.cache
 C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.AdminPUsChanges.resources
 C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.StudentPU.resources
+C:\Users\artde\OneDrive\Documents\!ШЭРАГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.csprojAssemblyReference.cache

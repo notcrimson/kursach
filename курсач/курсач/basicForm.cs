@@ -15,7 +15,14 @@ namespace курсач
         public static Model1 db = new Model1();
         public static Form previousForm { get; set; }
         public string path = Environment.CurrentDirectory.ToString() + @"\PUs\";
-        public static  string selectedItem;
+        public static string selectedItem;
+        Point lastClick;
+        int mx;
+        int my;
+        int sw;
+        int sh;
+        bool move;
+
         public basicForm()
         {
             InitializeComponent();
@@ -64,11 +71,69 @@ namespace курсач
             fHide.BackColor = Color.OliveDrab;
         }
 
-        private void Back_Click(object sender, EventArgs e)
+        //private void Back_Click(object sender, EventArgs e)
+        //{
+        //    this.Hide();
+        //    previousForm.Show();
+        //    previousForm = this;
+        //}
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            this.Hide();
-            previousForm.Show();
-            previousForm = this;
+            lastClick = e.Location;
+            Cursor.Current = Cursors.SizeAll;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastClick.X;
+                this.Top += e.Y - lastClick.Y;
+            }
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastClick = e.Location;
+            Cursor.Current = Cursors.SizeAll;
+        }
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastClick.X;
+                this.Top += e.Y - lastClick.Y;
+            }
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e) //sizer
+        {
+            move = true;
+            mx = MousePosition.X;
+            my = MousePosition.Y;
+            sw = Width;
+            sh = Height;
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move == true)
+            {
+                Width = MousePosition.X - mx + sw;
+                Height = MousePosition.Y - my + sh;
+            }
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = false;
+        }
+
+        private void sizer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

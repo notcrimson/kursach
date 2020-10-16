@@ -36,7 +36,9 @@ namespace курсач
 
                 if (usr.Role == "admin")
                 {
-
+                    AdminPUsChanges admin = new AdminPUsChanges();
+                    admin.Show();
+                    this.Hide();
                 }
                 else if (usr.Role == "student")
                 {
@@ -44,8 +46,20 @@ namespace курсач
                     menu.Show();
                     this.Hide();
                 }
-
             }
+        }
+
+        private void Login_Resize(object sender, EventArgs e)
+        {
+            //int locx = (this.Width) / 2 - (textBox1.Width / 2);
+            //int locy = textBox1.Location.Y;
+            //textBox1.Location = new Point(locx, locy);
+        }
+        private void Register_Click(object sender, EventArgs e)
+        {
+            Register reg = new Register();
+            reg.Show();
+            Hide();
         }
     }
 }

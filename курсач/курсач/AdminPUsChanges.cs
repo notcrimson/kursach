@@ -32,11 +32,11 @@ namespace курсач
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                MessageBox.Show(openFileDialog1.FileName.ToString());
                 object readOnly = true;
                 object visible = true;
                 object fileName = openFileDialog1.FileName.ToString();
-                fileNameString = openFileDialog1.FileName.ToString();
+                fileNameString = System.IO.Path.GetFileNameWithoutExtension(openFileDialog1.FileName);
+                //MessageBox.Show(fileNameString);
                 object missing = Type.Missing;
                 Microsoft.Office.Interop.Word.Document document;
                 Microsoft.Office.Interop.Word.Application application = new Microsoft.Office.Interop.Word.Application() { Visible = false };
@@ -58,8 +58,27 @@ namespace курсач
                 byte[] contentOfPuBytearray = Encoding.ASCII.GetBytes(contentOfPuString);
 
                 Professional_unit pu = new Professional_unit();
+                //MessageBox.Show(fileNameString);
                 pu.Name_of_PU = fileNameString;
+                pu.ContentOfPU = contentOfPuBytearray;
+                db.Professional_units.Add(pu);
 
+                try
+                {
+                    db.SaveChanges();
+                    MessageBox.Show("Content added to database");
+
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException ex)
+                {
+                    foreach (var validationErrors in ex.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            MessageBox.Show($"Property: {validationError.PropertyName} Error: {validationError.ErrorMessage}");
+                        }
+                    }
+                }
             }
             else
             {

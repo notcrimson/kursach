@@ -45,7 +45,6 @@
             // 
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(0, 606);
-            this.panel2.Controls.SetChildIndex(this.Back, 0);
             this.panel2.Controls.SetChildIndex(this.button1, 0);
             // 
             // label2

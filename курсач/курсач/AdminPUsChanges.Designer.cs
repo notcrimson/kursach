@@ -32,8 +32,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.addPU = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -41,7 +43,6 @@
             this.panel2.Controls.Add(this.addPU);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.SetChildIndex(this.button1, 0);
-            this.panel2.Controls.SetChildIndex(this.Back, 0);
             this.panel2.Controls.SetChildIndex(this.addPU, 0);
             // 
             // openFileDialog1
@@ -60,9 +61,10 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(33, 78);
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(840, 406);
+            this.richTextBox1.Size = new System.Drawing.Size(899, 438);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             // 
@@ -76,21 +78,31 @@
             this.addPU.UseVisualStyleBackColor = true;
             this.addPU.Click += new System.EventHandler(this.addPU_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.richTextBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 52);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(899, 438);
+            this.panel3.TabIndex = 5;
+            // 
             // AdminPUsChanges
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 540);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.panel3);
             this.Name = "AdminPUsChanges";
             this.Text = "PUPDFfile";
             this.Load += new System.EventHandler(this.PUPDFfile_Load);
-            this.Controls.SetChildIndex(this.richTextBox1, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.panel3, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -100,5 +112,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button addPU;
+        private System.Windows.Forms.Panel panel3;
     }
 }

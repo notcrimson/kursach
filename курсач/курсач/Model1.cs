@@ -27,13 +27,8 @@
                 .IsUnicode(false);
 
             modelBuilder.Entity<Professional_unit>()
-                .HasMany(e => e.Results)
-                .WithOptional(e => e.Professional_units)
-                .HasForeignKey(e => e.PU_name);
-
-            modelBuilder.Entity<Professional_unit>()
-                .HasOptional(e => e.Test)
-                .WithRequired(e => e.Professional_units);
+               .Property(e => e.Name_of_PU)
+               .IsUnicode(false);
 
             modelBuilder.Entity<Result>()
                 .Property(e => e.Student_login)

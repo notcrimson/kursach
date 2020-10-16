@@ -103,6 +103,16 @@ namespace курсач.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sizer {
+            get {
+                object obj = ResourceManager.GetObject("sizer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Снимок_экрана_2020_09_17_123654 {
             get {
                 object obj = ResourceManager.GetObject("Снимок экрана 2020-09-17 123654", resourceCulture);

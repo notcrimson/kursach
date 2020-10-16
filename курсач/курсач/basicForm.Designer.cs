@@ -34,9 +34,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Back = new System.Windows.Forms.Button();
+            this.sizer = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sizer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,11 +51,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(899, 52);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // fHide
             // 
+            this.fHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fHide.AutoSize = true;
             this.fHide.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.fHide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fHide.ForeColor = System.Drawing.Color.Black;
             this.fHide.Location = new System.Drawing.Point(842, -3);
             this.fHide.Name = "fHide";
@@ -68,6 +73,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.Red;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -85,6 +91,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FloralWhite;
@@ -93,27 +100,33 @@
             this.label1.Size = new System.Drawing.Size(74, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.OliveDrab;
-            this.panel2.Controls.Add(this.Back);
+            this.panel2.Controls.Add(this.sizer);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 490);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(899, 50);
             this.panel2.TabIndex = 1;
             // 
-            // Back
+            // sizer
             // 
-            this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back.Location = new System.Drawing.Point(33, 10);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(83, 32);
-            this.Back.TabIndex = 0;
-            this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
+            this.sizer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sizer.Image = global::курсач.Properties.Resources.sizer;
+            this.sizer.Location = new System.Drawing.Point(883, 33);
+            this.sizer.Name = "sizer";
+            this.sizer.Size = new System.Drawing.Size(16, 17);
+            this.sizer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sizer.TabIndex = 1;
+            this.sizer.TabStop = false;
+            this.sizer.Click += new System.EventHandler(this.sizer_Click);
+            this.sizer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.sizer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.sizer.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // basicForm
             // 
@@ -126,6 +139,7 @@
             this.ForeColor = System.Drawing.Color.DarkGreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimumSize = new System.Drawing.Size(899, 540);
             this.Name = "basicForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "basicForm";
@@ -133,16 +147,17 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sizer)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         protected System.Windows.Forms.Label label1;
-        protected System.Windows.Forms.Button Back;
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Panel panel2;
         protected System.Windows.Forms.Label label2;
         protected System.Windows.Forms.Label fHide;
+        private System.Windows.Forms.PictureBox sizer;
     }
 }
