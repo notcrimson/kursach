@@ -46,6 +46,9 @@ namespace курсач
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ImageConverter conv = new ImageConverter();
+            image = (byte[])conv.ConvertTo(pictureBox1.Image, typeof(byte[]));
+
             User usr = new User();
 
             if (confirmationForUpdate)
@@ -60,14 +63,13 @@ namespace курсач
                 try
                 {
                     db.SaveChanges();
-                    //DialogResult dr = 
-                    MessageBox.Show("Congrats, you created an account!", "Account created", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //if (dr == DialogResult.OK)
-                    //{
-                    //    Form3 menu = new Form3();
-                    //    menu.Show();
-                    //    this.Hide();
-                    //}
+                    DialogResult dr = MessageBox.Show("Congrats, you created an account!", "Account created", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (dr == DialogResult.OK)
+                    {
+                        Form3 menu = new Form3();
+                        menu.Show();
+                        this.Hide();
+                    }
                 }
                 catch (System.Data.Entity.Validation.DbEntityValidationException ex)
                 {
@@ -266,21 +268,14 @@ namespace курсач
 
         private void uploadPic_Click(object sender, EventArgs e)
         {
-            ImageConverter conv = new ImageConverter();
             //openFileDialog1.InitialDirectory = @"C:\Pictures";
             openFileDialog1.Filter = "JPG, PNG | *.jpg;*.png";
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
                 pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
-                
-                image = (byte[])conv.ConvertTo(pictureBox1.Image, typeof(byte[]));
+               
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

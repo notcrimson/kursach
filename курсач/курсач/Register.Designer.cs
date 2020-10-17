@@ -48,7 +48,6 @@
             this.passError = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -75,7 +74,7 @@
             // 
             this.Namef.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Namef.AutoSize = true;
-            this.Namef.Location = new System.Drawing.Point(419, 73);
+            this.Namef.Location = new System.Drawing.Point(376, 74);
             this.Namef.Name = "Namef";
             this.Namef.Size = new System.Drawing.Size(66, 22);
             this.Namef.TabIndex = 3;
@@ -85,7 +84,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(419, 116);
+            this.label4.Location = new System.Drawing.Point(376, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 22);
             this.label4.TabIndex = 3;
@@ -95,7 +94,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(419, 152);
+            this.label5.Location = new System.Drawing.Point(376, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 22);
             this.label5.TabIndex = 3;
@@ -104,7 +103,7 @@
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.Location = new System.Drawing.Point(419, 192);
+            this.label6.Location = new System.Drawing.Point(376, 193);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 53);
             this.label6.TabIndex = 3;
@@ -113,36 +112,36 @@
             // Namee
             // 
             this.Namee.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Namee.Location = new System.Drawing.Point(574, 70);
+            this.Namee.Location = new System.Drawing.Point(486, 74);
             this.Namee.Name = "Namee";
-            this.Namee.Size = new System.Drawing.Size(151, 31);
+            this.Namee.Size = new System.Drawing.Size(274, 31);
             this.Namee.TabIndex = 4;
             this.Namee.TextChanged += new System.EventHandler(this.Namee_TextChanged);
             // 
             // Username
             // 
             this.Username.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Username.Location = new System.Drawing.Point(574, 110);
+            this.Username.Location = new System.Drawing.Point(486, 114);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(151, 31);
+            this.Username.Size = new System.Drawing.Size(274, 31);
             this.Username.TabIndex = 5;
             this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // Password
             // 
             this.Password.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Password.Location = new System.Drawing.Point(574, 152);
+            this.Password.Location = new System.Drawing.Point(486, 156);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(154, 31);
+            this.Password.Size = new System.Drawing.Size(277, 31);
             this.Password.TabIndex = 6;
             this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // ConfirmPassword
             // 
             this.ConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ConfirmPassword.Location = new System.Drawing.Point(574, 195);
+            this.ConfirmPassword.Location = new System.Drawing.Point(486, 199);
             this.ConfirmPassword.Name = "ConfirmPassword";
-            this.ConfirmPassword.Size = new System.Drawing.Size(154, 31);
+            this.ConfirmPassword.Size = new System.Drawing.Size(277, 31);
             this.ConfirmPassword.TabIndex = 7;
             this.ConfirmPassword.TextChanged += new System.EventHandler(this.ConfirmPassword_TextChanged);
             // 
@@ -180,7 +179,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.nameError);
             this.panel3.Controls.Add(this.usernameError);
             this.panel3.Controls.Add(this.confirmpassError);
@@ -206,7 +204,7 @@
             this.nameError.AutoSize = true;
             this.nameError.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameError.ForeColor = System.Drawing.Color.Red;
-            this.nameError.Location = new System.Drawing.Point(745, 73);
+            this.nameError.Location = new System.Drawing.Point(807, 74);
             this.nameError.Name = "nameError";
             this.nameError.Size = new System.Drawing.Size(18, 25);
             this.nameError.TabIndex = 9;
@@ -218,7 +216,7 @@
             this.usernameError.AutoSize = true;
             this.usernameError.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usernameError.ForeColor = System.Drawing.Color.Red;
-            this.usernameError.Location = new System.Drawing.Point(745, 113);
+            this.usernameError.Location = new System.Drawing.Point(807, 114);
             this.usernameError.Name = "usernameError";
             this.usernameError.Size = new System.Drawing.Size(18, 25);
             this.usernameError.TabIndex = 9;
@@ -230,7 +228,7 @@
             this.confirmpassError.AutoSize = true;
             this.confirmpassError.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.confirmpassError.ForeColor = System.Drawing.Color.Red;
-            this.confirmpassError.Location = new System.Drawing.Point(745, 198);
+            this.confirmpassError.Location = new System.Drawing.Point(807, 199);
             this.confirmpassError.Name = "confirmpassError";
             this.confirmpassError.Size = new System.Drawing.Size(18, 25);
             this.confirmpassError.TabIndex = 9;
@@ -242,7 +240,7 @@
             this.passError.AutoSize = true;
             this.passError.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passError.ForeColor = System.Drawing.Color.Red;
-            this.passError.Location = new System.Drawing.Point(745, 155);
+            this.passError.Location = new System.Drawing.Point(807, 156);
             this.passError.Name = "passError";
             this.passError.Size = new System.Drawing.Size(18, 25);
             this.passError.TabIndex = 9;
@@ -257,16 +255,6 @@
             // 
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(507, 327);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 59);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Register
             // 
@@ -310,6 +298,5 @@
         private System.Windows.Forms.Label confirmpassError;
         private System.Windows.Forms.Label passError;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button button2;
     }
 }
