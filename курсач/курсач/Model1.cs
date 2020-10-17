@@ -8,7 +8,7 @@
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model1")
+            : base("name=Model11")
         {
         }
 
@@ -27,12 +27,14 @@
                 .IsUnicode(false);
 
             modelBuilder.Entity<Professional_unit>()
-               .Property(e => e.Name_of_PU)
-               .IsUnicode(false);
+                .HasMany(e => e.Results)
+                .WithOptional(e => e.Professional_units)
+                .HasForeignKey(e => e.PU_name);
 
-            modelBuilder.Entity<Result>()
-                .Property(e => e.Student_login)
-                .IsUnicode(false);
+            modelBuilder.Entity<Professional_unit>()
+                .HasMany(e => e.Tests)
+                .WithRequired(e => e.Professional_units)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Result>()
                 .Property(e => e.PU_name)
@@ -45,6 +47,11 @@
             modelBuilder.Entity<Result>()
                 .Property(e => e.Answers)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Result>()
+                .HasMany(e => e.Student_profile)
+                .WithOptional(e => e.Result)
+                .HasForeignKey(e => e.Result_ID);
 
             modelBuilder.Entity<Student_profile>()
                 .Property(e => e.Student_login)
@@ -71,11 +78,11 @@
                 .IsUnicode(false);
 
             modelBuilder.Entity<Test>()
-                .Property(e => e.Name_of_PU)
+                .Property(e => e.Test_name)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Test>()
-                .Property(e => e.Test_name)
+                .Property(e => e.Name_of_PU)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Test>()
@@ -85,6 +92,11 @@
             modelBuilder.Entity<Test>()
                 .Property(e => e.Student_login)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Test>()
+                .HasMany(e => e.Test_correct_answers)
+                .WithRequired(e => e.Test)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<User>()
                 .Property(e => e.Login)
@@ -103,13 +115,10 @@
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
-                .HasMany(e => e.Results)
-                .WithOptional(e => e.User)
-                .HasForeignKey(e => e.Student_login);
-
-            modelBuilder.Entity<User>()
-                .HasOptional(e => e.Student_profile)
-                .WithRequired(e => e.User);
+                .HasMany(e => e.Student_profile)
+                .WithRequired(e => e.User)
+                .HasForeignKey(e => e.Student_login)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<User>()
                 .HasMany(e => e.Tests)

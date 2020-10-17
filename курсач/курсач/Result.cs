@@ -9,10 +9,13 @@ namespace курсач
     [Table("Result")]
     public partial class Result
     {
-        public int ID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Result()
+        {
+            Student_profile = new HashSet<Student_profile>();
+        }
 
-        [StringLength(50)]
-        public string Student_login { get; set; }
+        public int ID { get; set; }
 
         [Column("PU name")]
         [StringLength(50)]
@@ -26,6 +29,9 @@ namespace курсач
 
         public virtual Professional_unit Professional_units { get; set; }
 
-        public virtual User User { get; set; }
+        public virtual Test Test { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Student_profile> Student_profile { get; set; }
     }
 }

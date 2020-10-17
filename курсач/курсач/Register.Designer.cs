@@ -28,19 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Timer timer1;
             this.Namef = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Namee = new System.Windows.Forms.TextBox();
+            this.Username = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
+            this.ConfirmPassword = new System.Windows.Forms.TextBox();
+            this.uploadPic = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.nameError = new System.Windows.Forms.Label();
+            this.usernameError = new System.Windows.Forms.Label();
+            this.confirmpassError = new System.Windows.Forms.Label();
+            this.passError = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +65,11 @@
             // 
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.SetChildIndex(this.button1, 0);
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Namef
             // 
@@ -96,47 +110,52 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Confirm password";
             // 
-            // textBox1
+            // Namee
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(574, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 31);
-            this.textBox1.TabIndex = 4;
+            this.Namee.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Namee.Location = new System.Drawing.Point(574, 70);
+            this.Namee.Name = "Namee";
+            this.Namee.Size = new System.Drawing.Size(151, 31);
+            this.Namee.TabIndex = 4;
+            this.Namee.TextChanged += new System.EventHandler(this.Namee_TextChanged);
             // 
-            // textBox2
+            // Username
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(574, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 31);
-            this.textBox2.TabIndex = 5;
+            this.Username.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Username.Location = new System.Drawing.Point(574, 110);
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(151, 31);
+            this.Username.TabIndex = 5;
+            this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
-            // textBox3
+            // Password
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(574, 152);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 31);
-            this.textBox3.TabIndex = 6;
+            this.Password.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Password.Location = new System.Drawing.Point(574, 152);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(154, 31);
+            this.Password.TabIndex = 6;
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
-            // textBox4
+            // ConfirmPassword
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(574, 195);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 31);
-            this.textBox4.TabIndex = 7;
+            this.ConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ConfirmPassword.Location = new System.Drawing.Point(574, 195);
+            this.ConfirmPassword.Name = "ConfirmPassword";
+            this.ConfirmPassword.Size = new System.Drawing.Size(154, 31);
+            this.ConfirmPassword.TabIndex = 7;
+            this.ConfirmPassword.TextChanged += new System.EventHandler(this.ConfirmPassword_TextChanged);
             // 
-            // button2
+            // uploadPic
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(127, 240);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 33);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "upload photo";
-            this.button2.UseVisualStyleBackColor = true;
+            this.uploadPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.uploadPic.Location = new System.Drawing.Point(127, 240);
+            this.uploadPic.Name = "uploadPic";
+            this.uploadPic.Size = new System.Drawing.Size(130, 33);
+            this.uploadPic.TabIndex = 8;
+            this.uploadPic.Text = "upload photo";
+            this.uploadPic.UseVisualStyleBackColor = true;
+            this.uploadPic.Click += new System.EventHandler(this.uploadPic_Click);
             // 
             // pictureBox1
             // 
@@ -161,25 +180,93 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.nameError);
+            this.panel3.Controls.Add(this.usernameError);
+            this.panel3.Controls.Add(this.confirmpassError);
+            this.panel3.Controls.Add(this.passError);
+            this.panel3.Controls.Add(this.Namee);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.Namef);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.uploadPic);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.ConfirmPassword);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.Password);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.Username);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 52);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(899, 438);
             this.panel3.TabIndex = 9;
             // 
+            // nameError
+            // 
+            this.nameError.AutoSize = true;
+            this.nameError.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameError.ForeColor = System.Drawing.Color.Red;
+            this.nameError.Location = new System.Drawing.Point(745, 73);
+            this.nameError.Name = "nameError";
+            this.nameError.Size = new System.Drawing.Size(18, 25);
+            this.nameError.TabIndex = 9;
+            this.nameError.Text = "!";
+            this.nameError.MouseHover += new System.EventHandler(this.nameError_MouseHover);
+            // 
+            // usernameError
+            // 
+            this.usernameError.AutoSize = true;
+            this.usernameError.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usernameError.ForeColor = System.Drawing.Color.Red;
+            this.usernameError.Location = new System.Drawing.Point(745, 113);
+            this.usernameError.Name = "usernameError";
+            this.usernameError.Size = new System.Drawing.Size(18, 25);
+            this.usernameError.TabIndex = 9;
+            this.usernameError.Text = "!";
+            this.usernameError.MouseHover += new System.EventHandler(this.usernameError_MouseHover);
+            // 
+            // confirmpassError
+            // 
+            this.confirmpassError.AutoSize = true;
+            this.confirmpassError.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.confirmpassError.ForeColor = System.Drawing.Color.Red;
+            this.confirmpassError.Location = new System.Drawing.Point(745, 198);
+            this.confirmpassError.Name = "confirmpassError";
+            this.confirmpassError.Size = new System.Drawing.Size(18, 25);
+            this.confirmpassError.TabIndex = 9;
+            this.confirmpassError.Text = "!";
+            this.confirmpassError.MouseHover += new System.EventHandler(this.confirmpassError_MouseHover);
+            // 
+            // passError
+            // 
+            this.passError.AutoSize = true;
+            this.passError.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passError.ForeColor = System.Drawing.Color.Red;
+            this.passError.Location = new System.Drawing.Point(745, 155);
+            this.passError.Name = "passError";
+            this.passError.Size = new System.Drawing.Size(18, 25);
+            this.passError.TabIndex = 9;
+            this.passError.Text = "!";
+            this.passError.MouseHover += new System.EventHandler(this.passError_MouseHover);
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(507, 327);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(134, 59);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Register
             // 
@@ -210,13 +297,19 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox Namee;
+        private System.Windows.Forms.TextBox Username;
+        private System.Windows.Forms.TextBox Password;
+        private System.Windows.Forms.TextBox ConfirmPassword;
+        private System.Windows.Forms.Button uploadPic;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label nameError;
+        private System.Windows.Forms.Label usernameError;
+        private System.Windows.Forms.Label confirmpassError;
+        private System.Windows.Forms.Label passError;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -67,13 +67,13 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model1.cs" />
     <Compile Include="AdminPUsChanges.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminPUsChanges.Designer.cs">
       <DependentUpon>AdminPUsChanges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model1.cs" />
     <Compile Include="Professional_unit.cs" />
     <Compile Include="Register.cs">
       <SubType>Form</SubType>

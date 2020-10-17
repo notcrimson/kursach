@@ -24,5 +24,7 @@ namespace курсач
         public string Correct_answers { get; set; }
 
         public virtual Professional_unit Professional_units { get; set; }
+
+        public virtual Test Test { get; set; }
     }
 }
