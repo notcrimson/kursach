@@ -274,7 +274,6 @@ namespace курсач
             if (result == DialogResult.OK)
             {
                 pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
-               
             }
         }
     }
