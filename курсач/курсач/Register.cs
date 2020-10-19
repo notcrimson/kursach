@@ -29,7 +29,7 @@ namespace курсач
         public string cpErrorMessage;
 
         public byte[] image;
- 
+
         public Register()
         {
             InitializeComponent();
@@ -38,10 +38,6 @@ namespace курсач
         private void Form2_Load(object sender, EventArgs e)
         {
             ActiveControl = Namee;
-            NameeCheck();
-            UsernameCheck();
-            PasswordCheck();
-            ConfirmPasswordCheck();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,44 +82,28 @@ namespace курсач
         public void NameeCheck()
         {
             regexString = @"^[а-я А-Я a-z A-Z]+$";
-            if (!String.IsNullOrEmpty(Namee.Text))
+            if (Regex.IsMatch(Namee.Text, regexString) is false)
             {
-                if (Regex.IsMatch(Namee.Text, regexString) is false)
-                {
-                    nErrorMessage = "Your name can contain only letters";
-                    nameError.Visible = true;
-                }
-                else
-                {
-                    nameError.Visible = false;
-                }
+                nErrorMessage = "Your name can contain only letters";
+                nameError.Visible = true;
             }
             else
             {
-
-                nErrorMessage = "The name field is unfilled";
-                nameError.Visible = true;
+                nameError.Visible = false;
             }
+
         }
         public void UsernameCheck()
         {
             regexString = @"^[А-Я а-я]+$";
-            if (!String.IsNullOrEmpty(Username.Text))
+            if (Regex.IsMatch(Username.Text, regexString) is false)
             {
-                if (Regex.IsMatch(Username.Text, regexString) is false)
-                {
-                    usernameError.Visible = false;
-                }
-                else
-                {
-                    usernameError.Visible = true;
-                    uErrorMessage = "Username cant contain russian letters";
-                }
+                usernameError.Visible = false;
             }
             else
             {
                 usernameError.Visible = true;
-                uErrorMessage = "The username field is unfilled";
+                uErrorMessage = "Username cant contain russian letters";
             }
         }
         public void PasswordCheck()
@@ -131,75 +111,59 @@ namespace курсач
             regexString = @"[!@#$%^&*]+";
             numb = @"[0-9]+";
             capL = @"[A-Z А-Я]+";
-            if (!String.IsNullOrEmpty(Password.Text))
+            if (Password.TextLength >= 6)
             {
-                if (Password.TextLength >= 6)
+                if (Regex.IsMatch(Password.Text, regexString))
                 {
-                    if (Regex.IsMatch(Password.Text, regexString))
+                    if (Regex.IsMatch(Password.Text, numb))
                     {
-                        if (Regex.IsMatch(Password.Text, numb))
+                        if (Regex.IsMatch(Password.Text, capL))
                         {
-                            if (Regex.IsMatch(Password.Text, capL))
-                            {
-                                passError.Visible = false;
-                            }
-                            else
-                            {
-                                pErrorMessage = "Password must contain at least one capital letter";
-                                passError.Visible = true;
-                            }
+                            passError.Visible = false;
                         }
                         else
                         {
-                            pErrorMessage = "Password must contain at least one number\n" +
-                                            "Password must contain at least one capital letter";
+                            pErrorMessage = "Password must contain at least one capital letter";
                             passError.Visible = true;
                         }
                     }
                     else
                     {
-                        pErrorMessage = "Password must contain at least one special character:\n" +
-                        "!@#$%^&*\n" +
-                        "Password must contain at least one number\n" +
-                        "Password must contain at least one capital letter";
+                        pErrorMessage = "Password must contain at least one number\n" +
+                                        "Password must contain at least one capital letter";
                         passError.Visible = true;
                     }
                 }
                 else
                 {
+                    pErrorMessage = "Password must contain at least one special character:\n" +
+                    "!@#$%^&*\n" +
+                    "Password must contain at least one number\n" +
+                    "Password must contain at least one capital letter";
                     passError.Visible = true;
-                    pErrorMessage = "Password must be at least 6 characters long\n" +
-                        "Password must contain at least one special character:\n" +
-                        "!@#$%^&*\n" +
-                        "Password must contain at least one number\n" +
-                        "Password must contain at least one capital letter";
                 }
             }
             else
             {
                 passError.Visible = true;
-                pErrorMessage = "The password field is unfilled";
+                pErrorMessage = "Password must be at least 6 characters long\n" +
+                    "Password must contain at least one special character:\n" +
+                    "!@#$%^&*\n" +
+                    "Password must contain at least one number\n" +
+                    "Password must contain at least one capital letter";
             }
 
         }
         public void ConfirmPasswordCheck()
         {
-            if (!String.IsNullOrEmpty(ConfirmPassword.Text))
+            if (Password.Text == ConfirmPassword.Text)
             {
-                if (Password.Text == ConfirmPassword.Text)
-                {
-                    confirmpassError.Visible = false;
-                }
-                else
-                {
-                    confirmpassError.Visible = true;
-                    cpErrorMessage = "Doesnt match the Password field";
-                }
+                confirmpassError.Visible = false;
             }
             else
             {
-                cpErrorMessage = "The confirm password field is unfilled";
                 confirmpassError.Visible = true;
+                cpErrorMessage = "Doesnt match the Password field";
             }
         }
         private void nameError_MouseHover(object sender, EventArgs e)
@@ -232,14 +196,16 @@ namespace курсач
             {
                 confirmationForUpdate = true;
             }
+            toolTip1.ShowAlways = true;
+
             //NameeCheck();
-            toolTip1.SetToolTip(nameError, nErrorMessage);
-            //UsernameCheck();
-            toolTip1.SetToolTip(usernameError, uErrorMessage);
-            //PasswordCheck();
-            toolTip1.SetToolTip(passError, pErrorMessage);
-            //ConfirmPassordCheck();
-            toolTip1.SetToolTip(confirmpassError, cpErrorMessage);
+            //toolTip1.SetToolTip(nameError, nErrorMessage);
+            ////UsernameCheck();
+            //toolTip1.SetToolTip(usernameError, uErrorMessage);
+            ////PasswordCheck();
+            //toolTip1.SetToolTip(passError, pErrorMessage);
+            ////ConfirmPassordCheck();
+            //toolTip1.SetToolTip(confirmpassError, cpErrorMessage);
         }
 
         private void Password_TextChanged(object sender, EventArgs e)
@@ -275,6 +241,46 @@ namespace курсач
             {
                 pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
             }
+        }
+
+        private void Namee_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(Namee.Text))
+            {
+                nErrorMessage = "The name field is unfilled";
+                nameError.Visible = true;
+            }
+            toolTip1.SetToolTip(nameError, nErrorMessage);
+        }
+
+        private void Username_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(Username.Text))
+            {
+                usernameError.Visible = true;
+                uErrorMessage = "The username field is unfilled";
+            }
+            toolTip1.SetToolTip(usernameError, uErrorMessage);
+        }
+
+        private void Password_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(Password.Text))
+            {
+                passError.Visible = true;
+                pErrorMessage = "The password field is unfilled";
+            }
+            toolTip1.SetToolTip(passError, pErrorMessage);
+        }
+
+        private void ConfirmPassword_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(ConfirmPassword.Text))
+            {
+                cpErrorMessage = "The confirm password field is unfilled";
+                confirmpassError.Visible = true;
+            }
+            toolTip1.SetToolTip(confirmpassError, cpErrorMessage);
         }
     }
 }

@@ -29,11 +29,6 @@ namespace курсач
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void listBox1_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedItem != null)
@@ -67,6 +62,11 @@ namespace курсач
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Write_a_test_Click(object sender, EventArgs e)
         {
 
         }

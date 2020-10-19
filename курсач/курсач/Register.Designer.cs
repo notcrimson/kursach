@@ -117,6 +117,7 @@
             this.Namee.Size = new System.Drawing.Size(274, 31);
             this.Namee.TabIndex = 4;
             this.Namee.TextChanged += new System.EventHandler(this.Namee_TextChanged);
+            this.Namee.Leave += new System.EventHandler(this.Namee_Leave);
             // 
             // Username
             // 
@@ -126,6 +127,7 @@
             this.Username.Size = new System.Drawing.Size(274, 31);
             this.Username.TabIndex = 5;
             this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
+            this.Username.Leave += new System.EventHandler(this.Username_Leave);
             // 
             // Password
             // 
@@ -135,6 +137,7 @@
             this.Password.Size = new System.Drawing.Size(277, 31);
             this.Password.TabIndex = 6;
             this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
+            this.Password.Leave += new System.EventHandler(this.Password_Leave);
             // 
             // ConfirmPassword
             // 
@@ -144,6 +147,7 @@
             this.ConfirmPassword.Size = new System.Drawing.Size(277, 31);
             this.ConfirmPassword.TabIndex = 7;
             this.ConfirmPassword.TextChanged += new System.EventHandler(this.ConfirmPassword_TextChanged);
+            this.ConfirmPassword.Leave += new System.EventHandler(this.ConfirmPassword_Leave);
             // 
             // uploadPic
             // 
@@ -209,6 +213,7 @@
             this.nameError.Size = new System.Drawing.Size(18, 25);
             this.nameError.TabIndex = 9;
             this.nameError.Text = "!";
+            this.nameError.Visible = false;
             this.nameError.MouseHover += new System.EventHandler(this.nameError_MouseHover);
             // 
             // usernameError
@@ -221,6 +226,7 @@
             this.usernameError.Size = new System.Drawing.Size(18, 25);
             this.usernameError.TabIndex = 9;
             this.usernameError.Text = "!";
+            this.usernameError.Visible = false;
             this.usernameError.MouseHover += new System.EventHandler(this.usernameError_MouseHover);
             // 
             // confirmpassError
@@ -233,6 +239,7 @@
             this.confirmpassError.Size = new System.Drawing.Size(18, 25);
             this.confirmpassError.TabIndex = 9;
             this.confirmpassError.Text = "!";
+            this.confirmpassError.Visible = false;
             this.confirmpassError.MouseHover += new System.EventHandler(this.confirmpassError_MouseHover);
             // 
             // passError
@@ -245,6 +252,7 @@
             this.passError.Size = new System.Drawing.Size(18, 25);
             this.passError.TabIndex = 9;
             this.passError.Text = "!";
+            this.passError.Visible = false;
             this.passError.MouseHover += new System.EventHandler(this.passError_MouseHover);
             // 
             // openFileDialog1
