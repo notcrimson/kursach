@@ -78,3 +78,27 @@ C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\
 C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.exe
 C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.pdb
 C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.Tests.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\bin\Debug\курсач.exe.config
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\bin\Debug\курсач.exe
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\bin\Debug\курсач.pdb
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\bin\Debug\EntityFramework.dll
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\bin\Debug\EntityFramework.SqlServer.dll
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\bin\Debug\EntityFramework.xml
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\bin\Debug\EntityFramework.SqlServer.xml
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.csprojAssemblyReference.cache
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.csproj.ResolveComReference.cache
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.basicForm.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.Login.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.AdminPUsChanges.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.Register.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.Form3.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.Properties.Resources.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.StudentPU.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.Tests.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.Typing.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.Units.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.csproj.GenerateResource.cache
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.csproj.CoreCompileInputs.cache
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.csproj.CopyComplete
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.exe
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.pdb

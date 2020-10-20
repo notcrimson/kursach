@@ -68,7 +68,9 @@ namespace курсач
 
         private void Write_a_test_Click(object sender, EventArgs e)
         {
-
+            Tests test = new Tests();
+            test.Show();
+            Hide();
         }
     }
 }
