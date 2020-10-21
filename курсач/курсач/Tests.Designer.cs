@@ -34,16 +34,23 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.finishTest = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.finishTest);
+            this.panel2.Controls.SetChildIndex(this.finishTest, 0);
             // 
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(165, 164);
+            this.radioButton4.Location = new System.Drawing.Point(165, 100);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(147, 26);
             this.radioButton4.TabIndex = 2;
@@ -54,7 +61,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(165, 68);
+            this.radioButton1.Location = new System.Drawing.Point(165, 132);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(147, 26);
             this.radioButton1.TabIndex = 2;
@@ -65,7 +72,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(165, 100);
+            this.radioButton2.Location = new System.Drawing.Point(165, 68);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(147, 26);
             this.radioButton2.TabIndex = 2;
@@ -76,7 +83,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(165, 132);
+            this.radioButton3.Location = new System.Drawing.Point(165, 164);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(147, 26);
             this.radioButton3.TabIndex = 2;
@@ -88,51 +95,63 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.radioButton2);
             this.panel3.Controls.Add(this.radioButton4);
             this.panel3.Controls.Add(this.radioButton1);
             this.panel3.Controls.Add(this.radioButton3);
-            this.panel3.Controls.Add(this.radioButton2);
-            this.panel3.Location = new System.Drawing.Point(12, 6);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(428, 224);
+            this.panel3.Size = new System.Drawing.Size(870, 224);
             this.panel3.TabIndex = 2;
             this.panel3.Visible = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
+            this.label3.AutoEllipsis = true;
             this.label3.Location = new System.Drawing.Point(108, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 22);
+            this.label3.Size = new System.Drawing.Size(765, 42);
             this.label3.TabIndex = 3;
             this.label3.Text = "label3";
             // 
-            // panel4
+            // flowLayoutPanel1
             // 
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 52);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(899, 438);
-            this.panel4.TabIndex = 3;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.panel3);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 52);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(899, 438);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // finishTest
+            // 
+            this.finishTest.Location = new System.Drawing.Point(29, 10);
+            this.finishTest.Name = "finishTest";
+            this.finishTest.Size = new System.Drawing.Size(110, 32);
+            this.finishTest.TabIndex = 2;
+            this.finishTest.Text = "Finish test";
+            this.finishTest.UseVisualStyleBackColor = true;
+            this.finishTest.Click += new System.EventHandler(this.finishTest_Click);
             // 
             // Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 540);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Tests";
             this.Text = "Tests";
             this.Load += new System.EventHandler(this.Tests_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
-            this.Controls.SetChildIndex(this.panel4, 0);
+            this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -144,6 +163,7 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button finishTest;
     }
 }

@@ -29,7 +29,7 @@ namespace курсач
 
         public virtual Professional_unit Professional_units { get; set; }
 
-        public virtual Test Test { get; set; }
+        public virtual Test_correct_answer Test_correct_answers { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student_profile> Student_profile { get; set; }

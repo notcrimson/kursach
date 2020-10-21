@@ -8,39 +8,26 @@ namespace курсач
 
     public partial class Test
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Test()
-        {
-            Results = new HashSet<Result>();
-            Test_correct_answers = new HashSet<Test_correct_answer>();
-        }
-
         [Key]
-        [Column("Test name")]
-        [StringLength(50)]
-        public string Test_name { get; set; }
+        [Column("Test ID")]
+        public int Test_ID { get; set; }
 
         [Column("Name of PU")]
         [Required]
         [StringLength(50)]
         public string Name_of_PU { get; set; }
 
-        [Column("Number of questions")]
-        public int? Number_of_questions { get; set; }
+        [Column("Test name")]
+        [Required]
+        [StringLength(50)]
+        public string Test_name { get; set; }
+
+        public string Question { get; set; }
 
         public string Answers { get; set; }
 
-        [StringLength(50)]
-        public string Student_login { get; set; }
-
         public virtual Professional_unit Professional_units { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Result> Results { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Test_correct_answer> Test_correct_answers { get; set; }
-
-        public virtual User User { get; set; }
+        public virtual Test_correct_answer Test_correct_answers { get; set; }
     }
 }
