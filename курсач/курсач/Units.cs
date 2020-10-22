@@ -21,6 +21,9 @@ namespace курсач
 
         private void Units_Load(object sender, EventArgs e)
         {
+            Form3 menu = new Form3();
+            previousForm = menu;
+
             var pus = from p in db.Professional_units
                       select new { p.Name_of_PU };
             foreach (var Pu in pus)
@@ -68,9 +71,15 @@ namespace курсач
 
         private void Write_a_test_Click(object sender, EventArgs e)
         {
-            Tests test = new Tests();
+            listOfTests test = new listOfTests();
             test.Show();
             Hide();
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            Close();
         }
     }
 }

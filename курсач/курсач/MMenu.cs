@@ -19,15 +19,24 @@ namespace курсач
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            Login l = new Login();
+            previousForm = l;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            previousForm = this;
+            
             this.Hide();
             Units pu = new Units();
             pu.Show();
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            //Login l = new Login();
+            //l.Show();
+            previousForm.Show();
+            Close();
         }
     }
 }

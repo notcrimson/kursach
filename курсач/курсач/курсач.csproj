@@ -61,6 +61,12 @@
     <Compile Include="basicForm.Designer.cs">
       <DependentUpon>basicForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="listOfTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listOfTests.Designer.cs">
+      <DependentUpon>listOfTests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="basicForm.resx">
       <DependentUpon>basicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listOfTests.resx">
+      <DependentUpon>listOfTests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

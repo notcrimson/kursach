@@ -19,6 +19,10 @@ namespace курсач
 
         private void StudentPU_Load(object sender, EventArgs e)
         {
+            Units un = new Units();
+            previousForm = un;
+
+            label1.Text = selectedItem;
             string contentString;
             Professional_unit pr = db.Professional_units.Find(selectedItem);
             if (pr != null)
@@ -26,6 +30,12 @@ namespace курсач
                 contentString = Encoding.ASCII.GetString(pr.ContentOfPU);
                 richTextBox1.Rtf = contentString;
             }
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            Close();
         }
     }
 }

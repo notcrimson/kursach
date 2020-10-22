@@ -80,9 +80,8 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(368, 201);
-            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 29);
+            this.textBox1.Size = new System.Drawing.Size(216, 31);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
@@ -90,9 +89,8 @@
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox2.Location = new System.Drawing.Point(368, 243);
-            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 29);
+            this.textBox2.Size = new System.Drawing.Size(216, 31);
             this.textBox2.TabIndex = 1;
             // 
             // button1

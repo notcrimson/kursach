@@ -37,6 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.Back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -46,13 +47,16 @@
             // 
             // label1
             // 
+            this.label1.Location = new System.Drawing.Point(346, 9);
             this.label1.Size = new System.Drawing.Size(178, 24);
             this.label1.Text = "Professional units";
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.Back);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.SetChildIndex(this.button1, 0);
+            this.panel2.Controls.SetChildIndex(this.Back, 0);
             // 
             // panel3
             // 
@@ -127,6 +131,7 @@
             // 
             this.listBox1.BackColor = System.Drawing.Color.LightGray;
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox1.ForeColor = System.Drawing.Color.DarkGreen;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 22;
             this.listBox1.Location = new System.Drawing.Point(0, 70);
@@ -135,6 +140,16 @@
             this.listBox1.TabIndex = 3;
             this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(29, 10);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(95, 32);
+            this.Back.TabIndex = 4;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Units
             // 
@@ -169,5 +184,6 @@
         private System.Windows.Forms.BindingSource professionalunitBindingSource;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button Back;
     }
 }

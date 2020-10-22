@@ -21,6 +21,7 @@ namespace курсач
 
         private void Tests_Load(object sender, EventArgs e)
         {
+            label1.Text = listOfTests.testName;
             int a = 0;
             int b = 0;
             int j = panel3.Location.X;
@@ -30,6 +31,7 @@ namespace курсач
             List<string> seperatedAnswer = new List<string>();
 
             var queryForAns = from testAnswers in db.Tests
+                              where testAnswers.Test_name == listOfTests.testName
                               select testAnswers.Answers;
 
             foreach (var answers in queryForAns)
@@ -44,6 +46,7 @@ namespace курсач
             string[] sepp = seperatedAnswer.ToArray();
 
             var queryForNQ = from k in db.Tests
+                             where k.Test_name == listOfTests.testName
                              select k.Question;
             int count = queryForNQ.Count();
             //MessageBox.Show(count.ToString());

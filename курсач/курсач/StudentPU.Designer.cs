@@ -29,9 +29,15 @@
         private void InitializeComponent()
         {
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.Back);
+            this.panel2.Controls.SetChildIndex(this.Back, 0);
             // 
             // richTextBox1
             // 
@@ -41,6 +47,16 @@
             this.richTextBox1.Size = new System.Drawing.Size(899, 438);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
+            // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(29, 10);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(95, 32);
+            this.Back.TabIndex = 5;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // StudentPU
             // 
@@ -64,5 +80,6 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button Back;
     }
 }

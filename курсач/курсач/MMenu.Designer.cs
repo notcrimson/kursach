@@ -31,6 +31,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -38,8 +39,14 @@
             // 
             // label1
             // 
+            this.label1.Location = new System.Drawing.Point(377, 9);
             this.label1.Size = new System.Drawing.Size(126, 24);
             this.label1.Text = "Main menu";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.Back);
+            this.panel2.Controls.SetChildIndex(this.Back, 0);
             // 
             // button2
             // 
@@ -72,6 +79,16 @@
             this.panel3.Size = new System.Drawing.Size(899, 438);
             this.panel3.TabIndex = 4;
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(29, 10);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(95, 32);
+            this.Back.TabIndex = 2;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -97,5 +114,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button Back;
     }
 }

@@ -38,6 +38,8 @@ namespace курсач
         private void Form2_Load(object sender, EventArgs e)
         {
             ActiveControl = Namee;
+            Login lg = new Login();
+            previousForm = lg;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -281,6 +283,12 @@ namespace курсач
                 confirmpassError.Visible = true;
             }
             toolTip1.SetToolTip(confirmpassError, cpErrorMessage);
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Close();
+            previousForm.Show();
         }
     }
 }

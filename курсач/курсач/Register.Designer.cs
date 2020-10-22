@@ -48,6 +48,7 @@
             this.passError = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.Back = new System.Windows.Forms.Button();
             timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,13 +58,16 @@
             // 
             // label1
             // 
+            this.label1.Location = new System.Drawing.Point(376, 9);
             this.label1.Size = new System.Drawing.Size(126, 24);
             this.label1.Text = "Registration";
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.Back);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.SetChildIndex(this.button1, 0);
+            this.panel2.Controls.SetChildIndex(this.Back, 0);
             // 
             // timer1
             // 
@@ -264,6 +268,16 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(29, 10);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(95, 32);
+            this.Back.TabIndex = 2;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -306,5 +320,6 @@
         private System.Windows.Forms.Label confirmpassError;
         private System.Windows.Forms.Label passError;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button Back;
     }
 }

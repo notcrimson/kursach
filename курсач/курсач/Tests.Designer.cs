@@ -42,6 +42,10 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(361, 9);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.finishTest);
@@ -126,7 +130,7 @@
             // 
             // finishTest
             // 
-            this.finishTest.Location = new System.Drawing.Point(29, 10);
+            this.finishTest.Location = new System.Drawing.Point(777, 8);
             this.finishTest.Name = "finishTest";
             this.finishTest.Size = new System.Drawing.Size(110, 32);
             this.finishTest.TabIndex = 2;
