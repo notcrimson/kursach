@@ -12,6 +12,7 @@ namespace курсач
 {
     public partial class basicForm : Form
     {
+        
         public static Model1 db = new Model1();
         public static Form previousForm { get; set; }
         public string path = Environment.CurrentDirectory.ToString() + @"\PUs\";
