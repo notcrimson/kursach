@@ -22,7 +22,8 @@ namespace курсач
 
         private void PUPDFfile_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show(openFileDialog1.FileName.ToString());
+            adminMenu am = new adminMenu();
+            previousForm = am;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,6 +85,12 @@ namespace курсач
             {
                 MessageBox.Show("File not selected");
             }
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            Close();
         }
     }
 }

@@ -21,6 +21,27 @@ namespace курсач
 
         private void Tests_Load(object sender, EventArgs e)
         {
+            
+            List<object> lmao = new List<object>();
+            var quer = from paa in db.Tests
+                       where paa.Test_name == "kek2"
+                       select paa;
+            foreach (var aa in quer)
+            {
+                lmao.Add(aa);
+            }
+            testBindingSource.DataSource = lmao;
+            //для андрея
+
+
+
+
+
+            //MessageBox.Show(s);
+            listOfTests l = new listOfTests();
+            previousForm = l;
+
+
             label1.Text = listOfTests.testName;
             int a = 0;
             int b = 0;
@@ -30,9 +51,16 @@ namespace курсач
             List<string> multipleAnswers = new List<string>();
             List<string> seperatedAnswer = new List<string>();
 
+           
+
+
+
+
             var queryForAns = from testAnswers in db.Tests
                               where testAnswers.Test_name == listOfTests.testName
                               select testAnswers.Answers;
+
+
 
             foreach (var answers in queryForAns)
             {
@@ -44,23 +72,43 @@ namespace курсач
             }
 
             string[] sepp = seperatedAnswer.ToArray();
+            MessageBox.Show(multipleAnswers.Count.ToString());
 
             var queryForNQ = from k in db.Tests
                              where k.Test_name == listOfTests.testName
                              select k.Question;
             int count = queryForNQ.Count();
-            //MessageBox.Show(count.ToString());
 
-            //for (int i = 0; i < sepp.Length; i++)
-            //{
-            //	MessageBox.Show(sepp[i]);
-            //}
-            //string[] kek = new string []{"TEST", "TEST2"};
+            //int countQ = 0;
+            
+
             List<string> Questions = new List<string>();
             foreach (var q in queryForNQ)
             {
                 Questions.Add(q);
             }
+            MessageBox.Show(Questions[0]);
+
+            List<string> ans = new List<string>();
+            List<int> numberOfAnswers = new List<int>();
+            for (int i = 0; i <= Questions.Count; i++)
+            {
+                string s = Questions[i];
+                var qForPossibleAnswers = from pA in db.Tests
+                                          where pA.Question == s
+                                          select pA.Answers;
+
+                foreach (var q in qForPossibleAnswers)
+                {
+                    ans.AddRange(q.Split(seperator2, StringSplitOptions.RemoveEmptyEntries));
+                }
+                numberOfAnswers.Add(ans.Count);
+                ans.Clear();
+            }
+
+
+
+
             //MessageBox.Show(Questions.Count.ToString());
             for (int i = 0; i < count; i++)
             {
@@ -132,6 +180,12 @@ namespace курсач
                 }
             }
             MessageBox.Show(k);
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            Close();
         }
     }
 }

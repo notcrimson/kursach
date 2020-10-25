@@ -121,7 +121,7 @@
             this.Register.Location = new System.Drawing.Point(29, 10);
             this.Register.Name = "Register";
             this.Register.Size = new System.Drawing.Size(94, 32);
-            this.Register.TabIndex = 4;
+            this.Register.TabIndex = 1;
             this.Register.Text = "Register";
             this.Register.UseVisualStyleBackColor = true;
             this.Register.Click += new System.EventHandler(this.Register_Click);

@@ -102,3 +102,7 @@ Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\к�
 Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.exe
 Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.pdb
 Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.listOfTests.resources
+C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.listOfTests.resources
+C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.adminAddTests.resources
+C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.adminMenu.resources
+C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.smallWindow.resources

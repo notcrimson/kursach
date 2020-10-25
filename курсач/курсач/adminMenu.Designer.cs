@@ -1,6 +1,6 @@
 ﻿namespace курсач
 {
-    partial class listOfTests
+    partial class adminMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.Back = new System.Windows.Forms.Button();
+            this.addPu = new System.Windows.Forms.Button();
+            this.addTest = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(364, 9);
-            this.label1.Size = new System.Drawing.Size(115, 24);
-            this.label1.Text = "List of tests";
+            this.label1.Text = "Admin\'s Menu";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.Back);
             this.panel2.Controls.SetChildIndex(this.Back, 0);
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.LightGray;
-            this.listBox1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 22;
-            this.listBox1.Location = new System.Drawing.Point(0, 52);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(899, 444);
-            this.listBox1.TabIndex = 2;
-            this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // Back
             // 
@@ -69,18 +54,40 @@
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // listOfTests
+            // addPu
+            // 
+            this.addPu.Location = new System.Drawing.Point(239, 212);
+            this.addPu.Name = "addPu";
+            this.addPu.Size = new System.Drawing.Size(174, 69);
+            this.addPu.TabIndex = 2;
+            this.addPu.Text = "Add a Professional Unit";
+            this.addPu.UseVisualStyleBackColor = true;
+            this.addPu.Click += new System.EventHandler(this.addPu_Click);
+            // 
+            // addTest
+            // 
+            this.addTest.Location = new System.Drawing.Point(485, 212);
+            this.addTest.Name = "addTest";
+            this.addTest.Size = new System.Drawing.Size(174, 69);
+            this.addTest.TabIndex = 2;
+            this.addTest.Text = "Add a Test";
+            this.addTest.UseVisualStyleBackColor = true;
+            this.addTest.Click += new System.EventHandler(this.addTest_Click);
+            // 
+            // adminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 540);
-            this.Controls.Add(this.listBox1);
-            this.Name = "listOfTests";
-            this.Text = "listOfTests";
-            this.Load += new System.EventHandler(this.listOfTests_Load);
+            this.Controls.Add(this.addTest);
+            this.Controls.Add(this.addPu);
+            this.Name = "adminMenu";
+            this.Text = "adminMenu";
+            this.Load += new System.EventHandler(this.adminMenu_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
-            this.Controls.SetChildIndex(this.listBox1, 0);
+            this.Controls.SetChildIndex(this.addPu, 0);
+            this.Controls.SetChildIndex(this.addTest, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -90,7 +97,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Button addPu;
+        private System.Windows.Forms.Button addTest;
     }
 }

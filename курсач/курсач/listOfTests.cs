@@ -20,6 +20,9 @@ namespace курсач
 
         private void listOfTests_Load(object sender, EventArgs e)
         {
+            Units u = new Units();
+            previousForm = u;
+
             var queryOftests = from t in db.Tests
                                where t.Name_of_PU == selectedItem
                                 select t.Test_name;
@@ -44,6 +47,17 @@ namespace курсач
             Tests te = new Tests();
             te.Show();
             Hide();
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            Close();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

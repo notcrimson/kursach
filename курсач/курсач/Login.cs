@@ -23,7 +23,7 @@ namespace курсач
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            ActiveControl = textBox1;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace курсач
 
                 if (usr.Role == "admin")
                 {
-                    AdminPUsChanges admin = new AdminPUsChanges();
+                    adminMenu admin = new adminMenu();
                     admin.Show();
                     this.Hide();
                 }
