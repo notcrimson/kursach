@@ -38,8 +38,8 @@ namespace курсач
 
         private void addTest_Click(object sender, EventArgs e)
         {
-            adminAddTests addT = new adminAddTests();
-            addT.Show();
+            Units un = new Units();
+            un.Show();
             Hide();
         }
     }

@@ -16,7 +16,7 @@ namespace курсач
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Units());
+            Application.Run(new Login());
         }
     }
 }

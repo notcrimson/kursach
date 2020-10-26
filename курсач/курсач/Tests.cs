@@ -21,7 +21,7 @@ namespace курсач
 
         private void Tests_Load(object sender, EventArgs e)
         {
-            
+
             List<object> lmao = new List<object>();
             var quer = from paa in db.Tests
                        where paa.Test_name == "kek2"
@@ -46,13 +46,13 @@ namespace курсач
             int a = 0;
             int b = 0;
             int j = panel3.Location.X;
-            
+
             string[] seperator1 = { ";" };
             string[] seperator2 = { "," };
             List<string> multipleAnswers = new List<string>();
             List<string> seperatedAnswer = new List<string>();
 
-           
+
 
 
 
@@ -81,7 +81,7 @@ namespace курсач
             int count = queryForNQ.Count();
 
             //int countQ = 0;
-            
+
 
             List<string> Questions = new List<string>();
             foreach (var q in queryForNQ)
@@ -92,7 +92,9 @@ namespace курсач
 
             List<string> ans = new List<string>();
             List<int> numberOfAnswers = new List<int>();
-            for (int i = 0; i <= Questions.Count-1; i++)
+
+
+            for (int i = 0; i <= Questions.Count - 1; i++)
             {
                 string s = Questions[i];
                 var qForPossibleAnswers = from pA in db.Tests
@@ -108,8 +110,9 @@ namespace курсач
             }
 
 
+
             MessageBox.Show(numberOfAnswers.Count.ToString());
-            int p=0;
+            int p = 0;
             //MessageBox.Show(Questions.Count.ToString());
             for (int i = 0; i < count; i++)
             {
@@ -129,11 +132,11 @@ namespace курсач
                 ll.Text = Questions[b];
                 b++;
                 gp.Controls.Add(ll);
-                
 
-                for (int d =0; d< numberOfAnswers[p];d++)
+
+                for (int d = 0; d <numberOfAnswers[p]; d++)
                 {
-                    
+
                     RadioButton rd = new RadioButton();
                     rd.Location = new Point(radioButton2.Location.X, answerY);
                     rd.Size = label3.Size;
@@ -190,7 +193,7 @@ namespace курсач
 
             for (int i = 0; i < answers.Count; i++)
             {
-                if (i+1 == answers.Count)
+                if (i + 1 == answers.Count)
                 {
                     k += answers[i];
                 }

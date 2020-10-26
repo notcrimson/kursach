@@ -21,8 +21,17 @@ namespace курсач
 
         private void Units_Load(object sender, EventArgs e)
         {
-            Form3 menu = new Form3();
-            previousForm = menu;
+            if (Login.USER.Role == "student")
+            {
+                Form3 menu = new Form3();
+                previousForm = menu;
+            }
+            else if (Login.USER.Role == "admin")
+            {
+                adminMenu adminMenu = new adminMenu();
+                previousForm = adminMenu;
+            }
+           
 
             var pus = from p in db.Professional_units
                       select new { p.Name_of_PU };
@@ -34,10 +43,18 @@ namespace курсач
 
         private void listBox1_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show("kek");
             if (listBox1.SelectedItem != null)
             {
                 selectedItem = listBox1.SelectedItem.ToString();
-                panel3.Visible = true;
+                if(Login.USER.Role == "student")
+                {
+                    panel3.Visible = true;
+                }
+                else if (Login.USER.Role == "admin")
+                {
+                    panel5.Visible = true;
+                }
             }
         }
 
@@ -80,6 +97,13 @@ namespace курсач
         {
             previousForm.Show();
             Close();
+        }
+
+        private void addTest_Click(object sender, EventArgs e)
+        {
+            adminAddTests a = new adminAddTests();
+            a.Show();
+            Hide();
         }
     }
 }

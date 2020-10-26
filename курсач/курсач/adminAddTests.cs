@@ -17,8 +17,9 @@ namespace курсач
         public int ind = 1;
         public int panelNumber = 1;
         public string panelN;
+        public string panelPossibleAnswerName;
         public string panelToDelete;
-
+        public Control pp;
         public adminAddTests()
         {
             InitializeComponent();
@@ -27,15 +28,14 @@ namespace курсач
         private void adminAddTests_Load(object sender, EventArgs e)
         {
             ActiveControl = textBox3;
-            adminMenu am = new adminMenu();
+            Units am = new Units();
             previousForm = am;
-            j = panel0.Location.Y + 293;
-            spaceBetweenQ = panelQ.Location.Y + 50;
+            j = panel0.Location.Y;
+            spaceBetweenQ = textBox2.Location.Y + 50;
+            addQues();
         }
-
-        private void addQuestion_Click(object sender, EventArgs e)
+        public void addQues()
         {
-            //CREATING THE PANEL FOR THE WHOLE QUESTION
             Panel p = new Panel();
             p.Name = "panel" + (panelNumber).ToString();
             p.Location = new Point(panel0.Location.X, j);
@@ -43,7 +43,6 @@ namespace курсач
             p.BorderStyle = panel0.BorderStyle;
             p.BackColor = panel0.BackColor;
             p.Enter += new EventHandler(this.panel0_Enter);
-            p.Click += new EventHandler(this.panel0_Click);
             j += 293;
             panelNumber++;
 
@@ -53,55 +52,41 @@ namespace курсач
             l.Text = label3.Text;
 
             TextBox t = new TextBox();
-            t.Location = textBox1.Location;
-            t.Size = textBox1.Size;
+            t.Location = questionField.Location;
+            t.Size = questionField.Size;
+            t.Name = questionField.Name;
 
             p.Controls.Add(l);
             p.Controls.Add(t);
 
-            // CREATING ONE QUESTION PANEL
-            Panel panQ = new Panel();
-            panQ.Location = panelQ.Location;
-            panQ.Size = panelQ.Size;
-            panQ.BackColor = panelQ.BackColor;
-            panQ.Visible = true;
-            panQ.BorderStyle = panelQ.BorderStyle;
+            // creating question 
+            TextBox posAnswerTextBox = new TextBox();
+            posAnswerTextBox.Location = textBox2.Location;
+            posAnswerTextBox.Size = textBox2.Size;
+            posAnswerTextBox.Enter += new EventHandler(this.textBox2_Enter);
+            posAnswerTextBox.TextChanged += new EventHandler(this.textBox2_TextChanged);
+
+            RadioButton posAnswerRadioBut = new RadioButton();
+            posAnswerRadioBut.Location = radioButton1.Location;
+            posAnswerRadioBut.Size = radioButton1.Size;
+            posAnswerRadioBut.Text = radioButton1.Text;
 
 
-            foreach (Control pQ in panelQ.Controls)
-            {
-                Control paQ = new Control();
-                if (pQ.GetType() == typeof(Label))
-                {
-                    paQ = new Label();
-                    paQ.Location = pQ.Location;
-                    paQ.Size = pQ.Size;
-                    paQ.Text = pQ.Text;
-                }
-                if (pQ.GetType() == typeof(TextBox))
-                {
-                    paQ = new TextBox();
-                    paQ.Location = pQ.Location;
-                    paQ.Size = pQ.Size;
-                }
-                if (pQ.GetType() == typeof(RadioButton))
-                {
-                    paQ = new RadioButton();
-                    paQ.Location = pQ.Location;
-                    paQ.Size = pQ.Size;
-                }
-                panQ.Controls.Add(paQ);
-            }
-            p.Controls.Add(panQ);
+            //p.Controls.Add(possibleAnswer);
+            p.Controls.Add(posAnswerTextBox);
+            p.Controls.Add(posAnswerRadioBut);
+
+            //p.Controls.Add(panQ);
 
             // CREATING BOTTEM PANEL WITH THE ADD AND DELETE BUTTONS
             Panel bp = new Panel();
+            bp.Name = panel4.Name;
             bp.Dock = DockStyle.Bottom;
             bp.Location = panel4.Location;
             bp.Size = panel4.Size;
             bp.BorderStyle = panel4.BorderStyle;
             bp.BackColor = panel4.BackColor;
-            bp.Visible = true;
+            bp.Enter += new EventHandler(this.panel4_Enter);
 
             Button add = new Button();
             add.Location = addAnswer.Location;
@@ -115,21 +100,29 @@ namespace курсач
             del.Size = button2.Size;
             del.Text = button2.Text;
             del.BackColor = button2.BackColor;
-            del.Click += new EventHandler(this.deleteQ_click);
+            del.Click += new EventHandler(this.deletePossibleAnswer);
+
+
 
             bp.Controls.Add(add);
             bp.Controls.Add(del);
+            //bp.Controls.Add(le);
+            //bp.Controls.Add(cmb);
 
             p.Controls.Add(bp);
             flowLayoutPanel1.Controls.Add(p);
         }
+        private void addQuestion_Click(object sender, EventArgs e)
+        {
+            addQues();
+        }
 
         private void deleteQ_Click(object sender, EventArgs e)
         {
-            //var panel = flowLayoutPanel1.Controls[panelN];
-            if (flowLayoutPanel1.Controls.Count >1 )
+            var panel = flowLayoutPanel1.Controls[panelN];
+            if (flowLayoutPanel1.Controls.Count > 1)
             {
-                flowLayoutPanel1.Controls.RemoveAt(flowLayoutPanel1.Controls.Count-1);
+                flowLayoutPanel1.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
             }
         }
 
@@ -138,57 +131,39 @@ namespace курсач
             previousForm.Show();
             Close();
         }
-
+        public int textbox = 0;
+        public int radiobutton = 0;
         private void addAnswer_Click(object sender, EventArgs e)
         {
-            Panel anotherQuestion = new Panel();
-            anotherQuestion.Name = "question № " + (ind).ToString();
-            anotherQuestion.Location = new Point(panelQ.Location.X, spaceBetweenQ);
-            anotherQuestion.Size = panelQ.Size;
-            anotherQuestion.BackColor = panelQ.BackColor;
-            spaceBetweenQ += 50;
-            ind++;
+            TextBox posAnswerTextBox = new TextBox();
+            posAnswerTextBox.Location = new Point(textBox2.Location.X, spaceBetweenQ);
+            posAnswerTextBox.Size = textBox2.Size;
+            posAnswerTextBox.Enter += new EventHandler(this.textBox2_Enter);
+            posAnswerTextBox.TextChanged += new EventHandler(this.textBox2_TextChanged);
 
-            foreach (Control question in panelQ.Controls)
-            {
-                Control c4 = new Control();
-                if (question.GetType() == typeof(Label))
-                {
-                    c4 = new Label();
-                    c4.Location = question.Location;
-                    c4.Size = question.Size;
-                    c4.Text = question.Text;
-                }
-                if (question.GetType() == typeof(TextBox))
-                {
-                    c4 = new TextBox();
-                    c4.Location = question.Location;
-                    c4.Size = question.Size;
-                }
-                if (question.GetType() == typeof(RadioButton))
-                {
-                    c4 = new RadioButton();
-                    c4.Location = question.Location;
-                    c4.Size = question.Size;
-                }
-                anotherQuestion.Controls.Add(c4);
-            }
+            RadioButton posAnswerRadioBut = new RadioButton();
+            posAnswerRadioBut.Location = new Point(radioButton1.Location.X, spaceBetweenQ);
+            posAnswerRadioBut.Size = radioButton1.Size;
+
+            spaceBetweenQ += 50;
+
             var panel = flowLayoutPanel1.Controls[panelN];
-            panel.Controls.Add(anotherQuestion);
+            //panel.Controls.Add(anotherAnswer);
+            //panel.Controls.Add(possibleAnswer);
+            panel.Controls.Add(posAnswerTextBox);
+            panel.Controls.Add(posAnswerRadioBut);
+
             panel.Size = new Size(panel.Width, panel.Height + 50);
         }
 
-        private void panel0_Click(object sender, EventArgs e)
+        private void deletePossibleAnswer(object sender, EventArgs e)
         {
 
-
-        }
-
-        private void deleteQ_click(object sender, EventArgs e)
-        {
             var panel = flowLayoutPanel1.Controls[panelN];
-            if (panel.Controls.Count > 4)
+            MessageBox.Show(panel.Controls.Count.ToString());
+            if (panel.Controls.Count > 5)
             {
+                panel.Controls.RemoveAt(panel.Controls.Count - 1);
                 panel.Controls.RemoveAt(panel.Controls.Count - 1);
             }
 
@@ -202,15 +177,15 @@ namespace курсач
             var panel = flowLayoutPanel1.Controls[panelN];
             foreach (Control h in panel.Controls)
             {
-                if (h.GetType() == typeof(Panel))
+                if (h.GetType() == typeof(RadioButton))
                 {
                     countQ++;
                 }
             }
 
-            for (int i = 0; i < countQ - 1; i++)
+            for (int i = 0; i < countQ; i++)
             {
-                spaceBetweenQ = panelQ.Location.Y + 50 + (i * 50);
+                spaceBetweenQ = textBox2.Location.Y + 50 + (i * 50);
             }
 
         }
@@ -219,22 +194,23 @@ namespace курсач
         {
             timer1.Enabled = true;
 
-            int countQ = 0;
-
             Panel questionPanel = sender as Panel;
             panelN = questionPanel.Name;
 
+            int countQ = 0;
+            var panel = flowLayoutPanel1.Controls[panelN];
 
-            foreach (Control h in questionPanel.Controls)
+            foreach (Control h in panel.Controls)
             {
-                if (h.GetType() == typeof(Panel))
+                if (h.GetType() == typeof(RadioButton))
                 {
                     countQ++;
                 }
             }
-            for (int i = 0; i < countQ - 1; i++)
+
+            for (int i = 0; i < countQ; i++)
             {
-                spaceBetweenQ = panelQ.Location.Y + 50 + (i * 50);
+                spaceBetweenQ = textBox2.Location.Y + 50 + (i * 50);
             }
         }
 
@@ -260,45 +236,101 @@ namespace курсач
             List<string> questions = new List<string>();
             List<string> pAnswers = new List<string>();
             List<string> allAnswers = new List<string>();
+
+            Test_correct_answer tca = new Test_correct_answer();
+            tca.Test_name = label1.Text;
+            tca.Name_of_PU = selectedItem;
+            string k2 = "";
+            List<string> answers = new List<string>();
             foreach (Panel p in flowLayoutPanel1.Controls)
             {
                 foreach (Control c in p.Controls)
                 {
-                    if(c is TextBox && !String.IsNullOrEmpty(((TextBox)c).Text))
+                    if (c is RadioButton)
                     {
-                        questions.Add(c.Text);
-                    }
-                    if (c is Panel)
-                    {
-                        foreach (Control c2 in c.Controls)
+                        if (((RadioButton)c).Checked)
                         {
-                            if (c2 is TextBox && !String.IsNullOrEmpty(((TextBox)c2).Text))
-                            {
-                                pAnswers.Add(c2.Text);
-                            }
+                            answers.Add(c.Text);
                         }
                     }
                 }
-                for (int i = 0; i < pAnswers.Count; i++)
-                {
-                    if (i + 1 == pAnswers.Count)
-                    {
-                        k += pAnswers[i] + ";";
-                    }
-                    else
-                    {
-                        k += pAnswers[i] + ", ";
-                    }
-                }
-                allAnswers.Add(k);
-                k = "";
-                pAnswers.Clear();
             }
 
-            Test test = new Test();
-            foreach(var a in questions)
+            for (int i = 0; i < answers.Count; i++)
             {
-                test.Name_of_PU = "1.Introduction to programming";
+                if (i + 1 == answers.Count)
+                {
+                    k2 += answers[i] + ";";
+                }
+                else
+                {
+                    k2 += answers[i] + ", ";
+                }
+            }
+            MessageBox.Show(k2);
+
+            tca.Correct_answers = k2;
+            db.Test_correct_answers.Add(tca);
+            try
+            {
+                db.SaveChanges();
+                MessageBox.Show("correct answers added");
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException ex)
+            {
+                foreach (var validationErrors in ex.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        MessageBox.Show($"Property: {validationError.PropertyName} Error: {validationError.ErrorMessage}");
+                    }
+                }
+            }
+
+            foreach (Control p in flowLayoutPanel1.Controls)
+            {
+                if(p is Panel && p.Visible)
+                {
+                    foreach (Control c in p.Controls)
+                    {
+                        if (c is TextBox && c.Visible)
+                        {
+                            if (c.Name == "questionField")
+                            {
+                                questions.Add(c.Text);
+                            }
+                            if (c.Name != "questionField")
+                            {
+                                pAnswers.Add(c.Text);
+                            }
+                        }
+                    }
+                    for (int i = 0; i < pAnswers.Count; i++)
+                    {
+                        if (i + 1 == pAnswers.Count)
+                        {
+                            k += pAnswers[i] + ";";
+                        }
+                        else
+                        {
+                            k += pAnswers[i] + ", ";
+                        }
+                    }
+                    allAnswers.Add(k);
+                    k = "";
+                    pAnswers.Clear();
+                }
+               
+            }
+
+
+            
+
+
+            Test test = new Test();
+            foreach (var a in questions)
+            {
+                test.Name_of_PU = selectedItem;
                 test.Test_name = label1.Text;
                 test.Question = questions[num];
                 test.Answers = allAnswers[num];
@@ -320,18 +352,74 @@ namespace курсач
                 }
                 num++;
             }
-            //for (int i = 0; i < allAnswers.Count; i++)
+
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            TextBox t = sender as TextBox;
+            string s = "";
+            foreach (Control c in pp.Controls)
+            {
+                if (c is TextBox)
+                {
+                    s = c.Text;
+                }
+                if (c is RadioButton)
+                {
+                    c.Text = s;
+                }
+            }
+
+        }
+
+        private void panelQ_Click(object sender, EventArgs e)
+        {
+            //Panel questionPanel = sender as Panel;
+            //panelPossibleAnswerName = questionPanel.Name;
+            ////var panel = panelN.Controls[pane];
+            //foreach(Control c in panel.Controls)
             //{
-            //    if (i  == allAnswers.Count)
+            //    if (c is Panel && c.Name != "panel4")
             //    {
-            //        l += allAnswers[i] + ";";
-            //    }
-            //    else
-            //    {
-            //        l += allAnswers[i] + ", ";
+            //        ((Panel)c).BorderStyle = BorderStyle.None;
             //    }
             //}
-                //MessageBox.Show(l);
+            //questionPanel.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void panel4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            string s = "";
+            List<string> list = new List<string>();
+            var panel = flowLayoutPanel1.Controls[panelN];
+            foreach (Control c in panel.Controls)
+            {
+                if (c is Panel)
+                {
+                    foreach (Control c2 in c.Controls)
+                    {
+                        if (c2 is TextBox)
+                        {
+                            s = c2.Text;
+                        }
+                        if (c2 is ComboBox)
+                        {
+                            string[] textBoxText = list.ToArray();
+                            ((ComboBox)c2).Items.Add(s);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            pp = flowLayoutPanel1.Controls[panelN];
         }
     }
 }

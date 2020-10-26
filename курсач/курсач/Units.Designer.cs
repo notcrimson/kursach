@@ -37,12 +37,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.addTest = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.professionalunitBindingSource)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -120,6 +123,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.listBox1);
+            this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 52);
@@ -134,12 +138,31 @@
             this.listBox1.ForeColor = System.Drawing.Color.DarkGreen;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 22;
-            this.listBox1.Location = new System.Drawing.Point(0, 70);
+            this.listBox1.Location = new System.Drawing.Point(0, 138);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(899, 368);
-            this.listBox1.TabIndex = 3;
+            this.listBox1.Size = new System.Drawing.Size(899, 300);
+            this.listBox1.TabIndex = 2;
             this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.addTest);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 70);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(899, 68);
+            this.panel5.TabIndex = 1;
+            this.panel5.Visible = false;
+            // 
+            // addTest
+            // 
+            this.addTest.Location = new System.Drawing.Point(722, 16);
+            this.addTest.Name = "addTest";
+            this.addTest.Size = new System.Drawing.Size(149, 34);
+            this.addTest.TabIndex = 0;
+            this.addTest.Text = "Add a Test";
+            this.addTest.UseVisualStyleBackColor = true;
+            this.addTest.Click += new System.EventHandler(this.addTest_Click);
             // 
             // Back
             // 
@@ -170,6 +193,7 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.professionalunitBindingSource)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -183,7 +207,9 @@
         private System.Windows.Forms.Button OpenPU;
         private System.Windows.Forms.BindingSource professionalunitBindingSource;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button addTest;
     }
 }
