@@ -46,6 +46,7 @@ namespace курсач
             int a = 0;
             int b = 0;
             int j = panel3.Location.X;
+            
             string[] seperator1 = { ";" };
             string[] seperator2 = { "," };
             List<string> multipleAnswers = new List<string>();
@@ -91,7 +92,7 @@ namespace курсач
 
             List<string> ans = new List<string>();
             List<int> numberOfAnswers = new List<int>();
-            for (int i = 0; i <= Questions.Count; i++)
+            for (int i = 0; i <= Questions.Count-1; i++)
             {
                 string s = Questions[i];
                 var qForPossibleAnswers = from pA in db.Tests
@@ -107,11 +108,12 @@ namespace курсач
             }
 
 
-
-
+            MessageBox.Show(numberOfAnswers.Count.ToString());
+            int p=0;
             //MessageBox.Show(Questions.Count.ToString());
             for (int i = 0; i < count; i++)
             {
+                int answerY = radioButton2.Location.Y;
                 Panel gp = new Panel();
                 gp.Location = new Point(panel3.Location.X, j);
                 gp.BorderStyle = panel3.BorderStyle;
@@ -119,34 +121,52 @@ namespace курсач
                 gp.Size = panel3.Size;
                 //gp.Dock = FillMode;
                 gp.Visible = true;
-
                 j += 230;
 
-                foreach (Control c in panel3.Controls)
+                Label ll = new Label();
+                ll.Location = label3.Location;
+                ll.Size = label3.Size;
+                ll.Text = Questions[b];
+                b++;
+                gp.Controls.Add(ll);
+                
+
+                for (int d =0; d< numberOfAnswers[p];d++)
                 {
+                    
+                    RadioButton rd = new RadioButton();
+                    rd.Location = new Point(radioButton2.Location.X, answerY);
+                    rd.Size = label3.Size;
+                    rd.Text = sepp[a];
+                    a++;
+                    answerY += 32;
+
+                    gp.Controls.Add(rd);
                     Control c2 = new Control();
-                    Control c3 = new Control();
-                    if (c.GetType() == typeof(Label))
-                    {
-                        c3 = new Label();
-                        c3.Location = c.Location;
-                        c3.Size = c.Size;
-                        c3.Text = Questions[b];
-                        b++;
-                    }
-                    if (c.GetType() == typeof(RadioButton))
-                    {
-                        c2 = new RadioButton();
-                        c2.Location = c.Location;
-                        c2.Size = c.Size;
-                        c2.Text = sepp[a];
-                        a++;
-                    }
-                    gp.Controls.Add(c2);
-                    gp.Controls.Add(c3);
+                    //Control c3 = new Control();
+                    //if (c.GetType() == typeof(Label))
+                    //{
+                    //    c3 = new Label();
+                    //    c3.Location = c.Location;
+                    //    c3.Size = c.Size;
+                    //    c3.Text = Questions[b];
+                    //    b++;
+                    //}
+                    //if (c.GetType() == typeof(RadioButton))
+                    //{
+                    //    c2 = new RadioButton();
+                    //    c2.Location = c.Location;
+                    //    c2.Size = c.Size;
+                    //    c2.Text = sepp[a];
+                    //    a++;
+                    //}
+                    //gp.Controls.Add(c2);
+                    //gp.Controls.Add(c3);
                 }
+                p++;
                 //MessageBox.Show(sepp.Length.ToString());
                 flowLayoutPanel1.Controls.Add(gp);
+
             }
         }
 

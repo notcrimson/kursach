@@ -106,3 +106,7 @@ C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\
 C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.adminAddTests.resources
 C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.adminMenu.resources
 C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.smallWindow.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.adminAddTests.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.adminMenu.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.smallWindow.resources
+Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.csproj.CoreCompileInputs.cache
