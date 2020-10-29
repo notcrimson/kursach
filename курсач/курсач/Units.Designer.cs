@@ -90,6 +90,7 @@
             this.button3.TabIndex = 1;
             this.button3.Text = "Play a game";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             // 
             // Write_a_test
             // 

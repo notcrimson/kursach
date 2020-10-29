@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentPU));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.Back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -64,6 +65,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 595);
             this.Controls.Add(this.richTextBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StudentPU";
             this.Text = "StudentPU";
             this.Load += new System.EventHandler(this.StudentPU_Load);
