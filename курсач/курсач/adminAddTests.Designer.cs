@@ -52,6 +52,11 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(89, 11);
+            this.label1.Size = new System.Drawing.Size(856, 24);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.textBox3);
@@ -120,7 +125,7 @@
             this.panel0.Controls.Add(this.radioButton1);
             this.panel0.Location = new System.Drawing.Point(3, 3);
             this.panel0.Name = "panel0";
-            this.panel0.Size = new System.Drawing.Size(870, 196);
+            this.panel0.Size = new System.Drawing.Size(983, 196);
             this.panel0.TabIndex = 6;
             this.panel0.Visible = false;
             this.panel0.Enter += new System.EventHandler(this.panel0_Enter);
@@ -132,7 +137,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 143);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(866, 49);
+            this.panel4.Size = new System.Drawing.Size(979, 49);
             this.panel4.TabIndex = 11;
             this.panel4.Click += new System.EventHandler(this.panel4_Click);
             this.panel4.Enter += new System.EventHandler(this.panel4_Enter);
@@ -164,9 +169,9 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.panel0);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 52);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 85);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(899, 438);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1008, 460);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // Back
@@ -181,7 +186,8 @@
             // 
             // addQuestion
             // 
-            this.addQuestion.Location = new System.Drawing.Point(221, 10);
+            this.addQuestion.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.addQuestion.Location = new System.Drawing.Point(274, 10);
             this.addQuestion.Name = "addQuestion";
             this.addQuestion.Size = new System.Drawing.Size(222, 32);
             this.addQuestion.TabIndex = 0;
@@ -191,7 +197,8 @@
             // 
             // deleteQ
             // 
-            this.deleteQ.Location = new System.Drawing.Point(449, 10);
+            this.deleteQ.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.deleteQ.Location = new System.Drawing.Point(502, 10);
             this.deleteQ.Name = "deleteQ";
             this.deleteQ.Size = new System.Drawing.Size(197, 32);
             this.deleteQ.TabIndex = 1;
@@ -205,7 +212,8 @@
             // 
             // addTest
             // 
-            this.addTest.Location = new System.Drawing.Point(786, 10);
+            this.addTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.addTest.Location = new System.Drawing.Point(888, 10);
             this.addTest.Name = "addTest";
             this.addTest.Size = new System.Drawing.Size(98, 32);
             this.addTest.TabIndex = 7;
@@ -215,7 +223,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(160, 11);
+            this.textBox3.Location = new System.Drawing.Point(270, 10);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(663, 31);
             this.textBox3.TabIndex = 3;
@@ -225,7 +233,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label5.Location = new System.Drawing.Point(3, 14);
+            this.label5.Location = new System.Drawing.Point(101, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(163, 22);
             this.label5.TabIndex = 7;
@@ -235,7 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 540);
+            this.ClientSize = new System.Drawing.Size(1008, 595);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "adminAddTests";
             this.Text = "adminAddTests";

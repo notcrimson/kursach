@@ -56,7 +56,7 @@
             // 
             // addPu
             // 
-            this.addPu.Location = new System.Drawing.Point(239, 212);
+            this.addPu.Location = new System.Drawing.Point(291, 238);
             this.addPu.Name = "addPu";
             this.addPu.Size = new System.Drawing.Size(174, 69);
             this.addPu.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // addTest
             // 
-            this.addTest.Location = new System.Drawing.Point(485, 212);
+            this.addTest.Location = new System.Drawing.Point(537, 238);
             this.addTest.Name = "addTest";
             this.addTest.Size = new System.Drawing.Size(174, 69);
             this.addTest.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 540);
+            this.ClientSize = new System.Drawing.Size(1008, 595);
             this.Controls.Add(this.addTest);
             this.Controls.Add(this.addPu);
             this.Name = "adminMenu";

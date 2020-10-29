@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using курсач.Properties;
 
 namespace курсач
 {
@@ -31,7 +32,7 @@ namespace курсач
 
         private void basicForm_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         public void label2_MouseHover(object sender, EventArgs e)
@@ -135,6 +136,53 @@ namespace курсач
         private void sizer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (this is Login)
+            {
+                return;
+            }
+            else
+            {
+                if (Login.USER.Role == "student")
+                {
+                    if (this is Form3)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        Form3 menu = new Form3();
+                        menu.Show();
+                        Close();
+                    }
+                }
+                else if (Login.USER.Role == "admin")
+                {
+                    if (this is adminMenu)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        adminMenu admenu = new adminMenu();
+                        admenu.Show();
+                        Close();
+                    }  
+                }
+            }
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Resources.rattlesnake2;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Resources.rattelsnake2white;
         }
     }
 }

@@ -103,6 +103,26 @@ namespace курсач.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rattelsnake2white {
+            get {
+                object obj = ResourceManager.GetObject("rattelsnake2white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rattlesnake2 {
+            get {
+                object obj = ResourceManager.GetObject("rattlesnake2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sizer {
             get {
                 object obj = ResourceManager.GetObject("sizer", resourceCulture);

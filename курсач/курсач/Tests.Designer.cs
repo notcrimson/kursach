@@ -56,11 +56,11 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(859, -1);
+            this.label2.Location = new System.Drawing.Point(979, 0);
             // 
             // fHide
             // 
-            this.fHide.Location = new System.Drawing.Point(831, -3);
+            this.fHide.Location = new System.Drawing.Point(951, -2);
             // 
             // radioButton2
             // 
@@ -80,7 +80,7 @@
             this.panel3.Controls.Add(this.radioButton2);
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(870, 224);
+            this.panel3.Size = new System.Drawing.Size(983, 224);
             this.panel3.TabIndex = 2;
             this.panel3.Visible = false;
             // 
@@ -100,7 +100,7 @@
             // finishTest
             // 
             this.finishTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.finishTest.Location = new System.Drawing.Point(766, 8);
+            this.finishTest.Location = new System.Drawing.Point(879, 10);
             this.finishTest.Name = "finishTest";
             this.finishTest.Size = new System.Drawing.Size(110, 32);
             this.finishTest.TabIndex = 2;
@@ -123,16 +123,16 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 52);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 85);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(899, 438);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1008, 460);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 540);
+            this.ClientSize = new System.Drawing.Size(1008, 595);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Tests";
             this.Text = "Tests";

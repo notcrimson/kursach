@@ -42,8 +42,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(400, 12);
-            this.label1.Size = new System.Drawing.Size(64, 24);
+            this.label1.Location = new System.Drawing.Point(0, 12);
             this.label1.Text = "Login";
             // 
             // panel2
@@ -58,7 +57,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(255, 208);
+            this.label3.Location = new System.Drawing.Point(310, 235);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 22);
             this.label3.TabIndex = 2;
@@ -69,7 +68,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(255, 247);
+            this.label4.Location = new System.Drawing.Point(310, 274);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 22);
             this.label4.TabIndex = 3;
@@ -79,7 +78,7 @@
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(368, 201);
+            this.textBox1.Location = new System.Drawing.Point(423, 228);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(216, 31);
             this.textBox1.TabIndex = 0;
@@ -88,7 +87,7 @@
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(368, 243);
+            this.textBox2.Location = new System.Drawing.Point(423, 270);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(216, 31);
             this.textBox2.TabIndex = 1;
@@ -96,7 +95,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(786, 10);
+            this.button1.Location = new System.Drawing.Point(895, 10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 32);
             this.button1.TabIndex = 0;
@@ -113,7 +112,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(899, 540);
+            this.panel3.Size = new System.Drawing.Size(1008, 595);
             this.panel3.TabIndex = 5;
             // 
             // Register
@@ -130,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 540);
+            this.ClientSize = new System.Drawing.Size(1008, 595);
             this.Controls.Add(this.panel3);
             this.Name = "Login";
             this.Text = "Form1";

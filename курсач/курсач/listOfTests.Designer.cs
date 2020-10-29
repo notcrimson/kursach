@@ -36,8 +36,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(364, 9);
-            this.label1.Size = new System.Drawing.Size(115, 24);
+            this.label1.Location = new System.Drawing.Point(0, 9);
             this.label1.Text = "List of tests";
             // 
             // panel2
@@ -45,15 +44,24 @@
             this.panel2.Controls.Add(this.Back);
             this.panel2.Controls.SetChildIndex(this.Back, 0);
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(979, 0);
+            // 
+            // fHide
+            // 
+            this.fHide.Location = new System.Drawing.Point(951, -2);
+            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.LightGray;
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox1.ForeColor = System.Drawing.Color.DarkGreen;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 22;
-            this.listBox1.Location = new System.Drawing.Point(0, 52);
+            this.listBox1.Location = new System.Drawing.Point(0, 85);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(899, 444);
+            this.listBox1.Size = new System.Drawing.Size(1008, 460);
             this.listBox1.TabIndex = 2;
             this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -73,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 540);
+            this.ClientSize = new System.Drawing.Size(1008, 595);
             this.Controls.Add(this.listBox1);
             this.Name = "listOfTests";
             this.Text = "listOfTests";

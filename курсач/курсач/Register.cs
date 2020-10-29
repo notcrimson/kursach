@@ -14,19 +14,19 @@ namespace курсач
     public partial class Register : basicForm
     {
         // Regex strings
-        public string regexString;
-        public string numb;
-        public string capL;
+        string regexString;
+        string numb;
+        string capL;
 
         // confirmation for inserting in db
-        public bool confirmationForUpdate;
+        bool confirmationForUpdate;
 
         // ERROR MESSAGES
 
-        public string nErrorMessage;
-        public string uErrorMessage;
-        public string pErrorMessage;
-        public string cpErrorMessage;
+        string nErrorMessage;
+        string uErrorMessage;
+        string pErrorMessage;
+        string cpErrorMessage;
 
         public byte[] image;
 

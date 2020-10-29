@@ -28,6 +28,7 @@ namespace курсач
 
         private void button1_Click(object sender, EventArgs e)
         {
+            timer1.Enabled = true;
             openFileDialog1.InitialDirectory = path;
             openFileDialog1.Filter = "Word Document|*.doc; *.docx";
             DialogResult result = openFileDialog1.ShowDialog();
@@ -70,7 +71,7 @@ namespace курсач
                     MessageBox.Show("Content added to database");
 
                 }
-                catch (System.Data.Entity.Validation.DbEntityValidationException ex)
+                catch (System.Data.Entity.Validation.DbEntityValidationException ex) // make a catch for reapeating keys 
                 {
                     foreach (var validationErrors in ex.EntityValidationErrors)
                     {
@@ -91,6 +92,11 @@ namespace курсач
         {
             previousForm.Show();
             Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.addPU = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Back = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -67,7 +69,7 @@
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(899, 438);
+            this.richTextBox1.Size = new System.Drawing.Size(1008, 460);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             // 
@@ -85,9 +87,9 @@
             // 
             this.panel3.Controls.Add(this.richTextBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 52);
+            this.panel3.Location = new System.Drawing.Point(0, 85);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(899, 438);
+            this.panel3.Size = new System.Drawing.Size(1008, 460);
             this.panel3.TabIndex = 5;
             // 
             // Back
@@ -100,11 +102,15 @@
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // AdminPUsChanges
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 540);
+            this.ClientSize = new System.Drawing.Size(1008, 595);
             this.Controls.Add(this.panel3);
             this.Name = "AdminPUsChanges";
             this.Text = "PUPDFfile";
@@ -127,5 +133,6 @@
         private System.Windows.Forms.Button addPU;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -324,9 +324,6 @@ namespace курсач
             }
 
 
-            
-
-
             Test test = new Test();
             foreach (var a in questions)
             {
