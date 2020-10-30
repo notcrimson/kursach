@@ -140,7 +140,7 @@ namespace курсач
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (this is Login)
+            if (this is Login || this is Register)
             {
                 return;
             }

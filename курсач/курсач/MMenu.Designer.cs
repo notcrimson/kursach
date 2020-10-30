@@ -35,16 +35,16 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.Back);
+            this.panel2.Controls.SetChildIndex(this.Back, 0);
+            // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Size = new System.Drawing.Size(1002, 24);
             this.label1.Text = "Main menu";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.Back);
-            this.panel2.Controls.SetChildIndex(this.Back, 0);
             // 
             // button2
             // 
@@ -76,7 +76,7 @@
             this.profile.TabIndex = 2;
             this.profile.Text = "See profile";
             this.profile.UseVisualStyleBackColor = true;
-            this.profile.Click += new System.EventHandler(this.button2_Click);
+            this.profile.Click += new System.EventHandler(this.profile_Click);
             // 
             // Form3
             // 

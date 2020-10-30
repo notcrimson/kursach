@@ -65,6 +65,7 @@ namespace курсач
                     if (dr == DialogResult.OK)
                     {
                         Form3 menu = new Form3();
+                        Login.USER = usr;
                         menu.Show();
                         this.Hide();
                     }
@@ -79,6 +80,10 @@ namespace курсач
                         }
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("All fields are unfilled", "Error",MessageBoxButtons.OK ,MessageBoxIcon.Error);
             }
         }
         public void NameeCheck()
@@ -190,7 +195,9 @@ namespace курсач
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (nameError.Visible && usernameError.Visible && passError.Visible && confirmpassError.Visible)
+            if ((nameError.Visible && usernameError.Visible && passError.Visible && confirmpassError.Visible) || (
+                String.IsNullOrEmpty(Namee.Text) && String.IsNullOrEmpty(Username.Text) && String.IsNullOrEmpty(Password.Text) && 
+                String.IsNullOrEmpty(ConfirmPassword.Text)) )
             {
                 confirmationForUpdate = false;
             }

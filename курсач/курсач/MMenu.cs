@@ -25,7 +25,6 @@ namespace курсач
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
             this.Hide();
             Units pu = new Units();
             pu.Show();
@@ -37,6 +36,11 @@ namespace курсач
             //l.Show();
             previousForm.Show();
             Close();
+        }
+
+        private void profile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

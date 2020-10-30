@@ -34,9 +34,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fHide = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.sizer = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -107,20 +107,6 @@
             this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
             this.label2.MouseHover += new System.EventHandler(this.label2_MouseHover);
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label1.Location = new System.Drawing.Point(0, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1008, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
-            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.OliveDrab;
@@ -145,6 +131,20 @@
             this.sizer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.sizer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.sizer.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FloralWhite;
+            this.label1.Location = new System.Drawing.Point(0, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1008, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // basicForm
             // 
@@ -173,12 +173,12 @@
         }
 
         #endregion
-        protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Panel panel2;
         protected System.Windows.Forms.Label label2;
         protected System.Windows.Forms.Label fHide;
         private System.Windows.Forms.PictureBox sizer;
         private System.Windows.Forms.PictureBox pictureBox1;
+        protected System.Windows.Forms.Label label1;
     }
 }
