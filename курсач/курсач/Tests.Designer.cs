@@ -43,10 +43,6 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(6, 9);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.Back);
@@ -62,16 +58,23 @@
             // 
             this.fHide.Location = new System.Drawing.Point(951, -2);
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(6, 9);
+            // 
             // radioButton2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(165, 68);
+            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton2.Location = new System.Drawing.Point(165, 57);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(147, 26);
+            this.radioButton2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.radioButton2.Size = new System.Drawing.Size(757, 68);
             this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton1";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.Text = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" +
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" +
+    "x\r\n";
+            this.radioButton2.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -80,7 +83,7 @@
             this.panel3.Controls.Add(this.radioButton2);
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(983, 224);
+            this.panel3.Size = new System.Drawing.Size(983, 279);
             this.panel3.TabIndex = 2;
             this.panel3.Visible = false;
             // 
@@ -144,7 +147,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

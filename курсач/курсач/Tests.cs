@@ -73,7 +73,7 @@ namespace курсач
             }
 
             string[] sepp = seperatedAnswer.ToArray();
-            MessageBox.Show(multipleAnswers.Count.ToString());
+            //MessageBox.Show(multipleAnswers.Count.ToString());
 
             var queryForNQ = from k in db.Tests
                              where k.Test_name == listOfTests.testName
@@ -88,7 +88,7 @@ namespace курсач
             {
                 Questions.Add(q);
             }
-            MessageBox.Show(Questions[0]);
+            //MessageBox.Show(Questions[0]);
 
             List<string> ans = new List<string>();
             List<int> numberOfAnswers = new List<int>();
@@ -111,7 +111,7 @@ namespace курсач
 
 
 
-            MessageBox.Show(numberOfAnswers.Count.ToString());
+            //MessageBox.Show(numberOfAnswers.Count.ToString());
             int p = 0;
             //MessageBox.Show(Questions.Count.ToString());
             for (int i = 0; i < count; i++)
@@ -134,15 +134,18 @@ namespace курсач
                 gp.Controls.Add(ll);
 
 
-                for (int d = 0; d <numberOfAnswers[p]; d++)
+                for (int d = 0; d < numberOfAnswers[p]; d++)
                 {
 
                     RadioButton rd = new RadioButton();
                     rd.Location = new Point(radioButton2.Location.X, answerY);
-                    rd.Size = label3.Size;
+                    rd.BackColor = radioButton2.BackColor;
+
+                    rd.AutoSize = false;
+                    rd.Size = radioButton2.Size;
                     rd.Text = sepp[a];
                     a++;
-                    answerY += 32;
+                    answerY += 53;
 
                     gp.Controls.Add(rd);
                     Control c2 = new Control();
@@ -195,7 +198,7 @@ namespace курсач
             {
                 if (i + 1 == answers.Count)
                 {
-                    k += answers[i];
+                    k += answers[i] + ";";
                 }
                 else
                 {
@@ -203,6 +206,28 @@ namespace курсач
                 }
             }
             MessageBox.Show(k);
+            MessageBox.Show(selectedItem);
+
+            Result r = new Result();
+            r.PU_name = selectedItem;
+            r.Test_name = listOfTests.testName;
+            r.Answers = k;
+            db.Results.Add(r);
+            try
+            {
+                db.SaveChanges();
+                MessageBox.Show("result added");
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException ex)
+            {
+                foreach (var validationErrors in ex.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        MessageBox.Show($"Property: {validationError.PropertyName} Error: {validationError.ErrorMessage}");
+                    }
+                }
+            }
         }
 
         private void Back_Click(object sender, EventArgs e)

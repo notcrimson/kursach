@@ -167,6 +167,9 @@
     <EmbeddedResource Include="AdminPUsChanges.resx">
       <DependentUpon>AdminPUsChanges.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
