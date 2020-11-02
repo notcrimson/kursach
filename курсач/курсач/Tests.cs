@@ -98,7 +98,7 @@ namespace курсач
             {
                 string s = Questions[i];
                 var qForPossibleAnswers = from pA in db.Tests
-                                          where pA.Question == s
+                                          where pA.Question == s && pA.Test_name == label1.Text
                                           select pA.Answers;
 
                 foreach (var q in qForPossibleAnswers)
@@ -140,6 +140,7 @@ namespace курсач
                     RadioButton rd = new RadioButton();
                     rd.Location = new Point(radioButton2.Location.X, answerY);
                     rd.BackColor = radioButton2.BackColor;
+                    
 
                     rd.AutoSize = false;
                     rd.Size = radioButton2.Size;
