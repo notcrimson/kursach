@@ -23,10 +23,11 @@ namespace курсач
             Units u = new Units();
             previousForm = u;
 
-            var queryOftests = from t in db.Tests
+            var queryOftests = from t in db.The_Test
                                where t.Name_of_PU == selectedItem
                                 select t.Test_name;
-            foreach(var tests in queryOftests.Distinct())
+
+            foreach(var tests in queryOftests)
             {
                 listBox1.Items.Add(tests);
             }
@@ -44,7 +45,7 @@ namespace курсач
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            Tests te = new Tests();
+            TestsForm te = new TestsForm();
             te.Show();
             Hide();
         }

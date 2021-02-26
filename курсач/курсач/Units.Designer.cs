@@ -68,7 +68,6 @@
             this.panel3.Size = new System.Drawing.Size(1008, 70);
             this.panel3.TabIndex = 0;
             this.panel3.Visible = false;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // OpenPU
             // 

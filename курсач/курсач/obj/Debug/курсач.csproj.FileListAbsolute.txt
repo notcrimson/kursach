@@ -111,3 +111,33 @@ Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\к�
 Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.smallWindow.resources
 Z:\2020_2021 учебный год\41 ИС\Седов Артем\git\kursach\курсач\курсач\obj\Debug\курсач.csproj.CoreCompileInputs.cache
 C:\Users\artde\OneDrive\Documents\!ШЭРЭГА\4 курс\kursach\курсач\курсач\obj\Debug\курсач.Profile.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\bin\Debug\курсач.exe.config
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\bin\Debug\курсач.exe
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\bin\Debug\курсач.pdb
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\bin\Debug\EntityFramework.dll
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\bin\Debug\EntityFramework.SqlServer.dll
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\bin\Debug\EntityFramework.xml
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\bin\Debug\EntityFramework.SqlServer.xml
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.csprojAssemblyReference.cache
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.csproj.ResolveComReference.cache
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.adminAddTests.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.adminMenu.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.basicForm.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.listOfTests.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.Login.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.AdminPUsChanges.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.Profile.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.Register.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.Form3.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.Properties.Resources.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.smallWindow.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.StudentPU.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.Typing.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.Units.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.csproj.GenerateResource.cache
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.csproj.CoreCompileInputs.cache
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.csproj.CopyComplete
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.exe
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.pdb
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.UserControl1.resources
+D:\!ШАРАГА\4 КУРС\New folder\kursach\курсач\курсач\obj\Debug\курсач.TestsForm.resources

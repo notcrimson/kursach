@@ -40,17 +40,17 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 12);
-            this.label1.Text = "Login";
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.Register);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.SetChildIndex(this.button1, 0);
             this.panel2.Controls.SetChildIndex(this.Register, 0);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 12);
+            this.label1.Text = "Login";
             // 
             // label3
             // 
@@ -114,6 +114,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1008, 595);
             this.panel3.TabIndex = 5;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // Register
             // 

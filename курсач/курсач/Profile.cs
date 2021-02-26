@@ -19,7 +19,7 @@ namespace курсач
 
         private void Profile_Load(object sender, EventArgs e)
         {
-
+            userControl11.TName = "kek";
         }
     }
 }

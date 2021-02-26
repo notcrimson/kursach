@@ -40,7 +40,9 @@ namespace курсач
 
         private void profile_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Profile profile = new Profile();
+            profile.Show();
         }
     }
 }

@@ -99,6 +99,7 @@
     <Compile Include="Profile.Designer.cs">
       <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Question.cs" />
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,16 +127,14 @@
     <Compile Include="StudentPU.Designer.cs">
       <DependentUpon>StudentPU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student_profile.cs" />
     <Compile Include="sysdiagram.cs" />
-    <Compile Include="Test.cs" />
-    <Compile Include="Tests.cs">
+    <Compile Include="TestsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tests.Designer.cs">
-      <DependentUpon>Tests.cs</DependentUpon>
+    <Compile Include="TestsForm.Designer.cs">
+      <DependentUpon>TestsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test_correct_answer.cs" />
+    <Compile Include="The_Test.cs" />
     <Compile Include="Typing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +148,12 @@
       <DependentUpon>Units.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="adminAddTests.resx">
       <DependentUpon>adminAddTests.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,14 +197,17 @@
     <EmbeddedResource Include="StudentPU.resx">
       <DependentUpon>StudentPU.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tests.resx">
-      <DependentUpon>Tests.cs</DependentUpon>
+    <EmbeddedResource Include="TestsForm.resx">
+      <DependentUpon>TestsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Typing.resx">
       <DependentUpon>Typing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Units.resx">
       <DependentUpon>Units.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Professional_unit.datasource" />

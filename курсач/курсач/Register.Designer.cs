@@ -56,17 +56,17 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 9);
-            this.label1.Text = "Registration";
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.Back);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.SetChildIndex(this.button1, 0);
             this.panel2.Controls.SetChildIndex(this.Back, 0);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 9);
+            this.label1.Text = "Registration";
             // 
             // timer1
             // 
@@ -205,6 +205,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1008, 460);
             this.panel3.TabIndex = 9;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // nameError
             // 

@@ -13,7 +13,6 @@ namespace курсач
     public partial class Login : basicForm
     {
         public static User USER { get; set; }
-
         
 
         public Login()
@@ -28,7 +27,7 @@ namespace курсач
 
         private void button1_Click(object sender, EventArgs e)
         {
-            User usr = db.Users.Find(textBox1.Text);
+            User usr = db.Users.Where(x=> x.Login == textBox1.Text).FirstOrDefault();
             if ((usr != null) && (usr.Password == textBox2.Text))
             {
                 USER = usr;
@@ -47,6 +46,10 @@ namespace курсач
                     this.Hide();
                 }
             }
+            else
+            {
+                MessageBox.Show("Incorrect Password or Login\nCheck if you entered the them correctly", "Wrong credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Login_Resize(object sender, EventArgs e)
@@ -60,6 +63,11 @@ namespace курсач
             Register reg = new Register();
             reg.Show();
             Hide();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

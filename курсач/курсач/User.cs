@@ -11,10 +11,12 @@ namespace курсач
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            Student_profile = new HashSet<Student_profile>();
+            Results = new HashSet<Result>();
         }
 
-        [Key]
+        public int UserId { get; set; }
+
+        [Required]
         [StringLength(50)]
         public string Login { get; set; }
 
@@ -33,6 +35,6 @@ namespace курсач
         public string Role { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Student_profile> Student_profile { get; set; }
+        public virtual ICollection<Result> Results { get; set; }
     }
 }

@@ -76,11 +76,6 @@ namespace курсач
             //listBox1.Location = new Point(locx2, locy2);
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 

@@ -12,9 +12,7 @@ namespace курсач
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Professional_unit()
         {
-            Results = new HashSet<Result>();
-            Test_correct_answers = new HashSet<Test_correct_answer>();
-            Tests = new HashSet<Test>();
+            The_Test = new HashSet<The_Test>();
         }
 
         [Key]
@@ -25,12 +23,6 @@ namespace курсач
         public byte[] ContentOfPU { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Result> Results { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Test_correct_answer> Test_correct_answers { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Test> Tests { get; set; }
+        public virtual ICollection<The_Test> The_Test { get; set; }
     }
 }

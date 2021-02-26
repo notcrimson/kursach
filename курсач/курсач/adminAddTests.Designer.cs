@@ -52,11 +52,6 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(89, 11);
-            this.label1.Size = new System.Drawing.Size(856, 24);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.textBox3);
@@ -77,6 +72,11 @@
             this.panel2.Controls.SetChildIndex(this.addQuestion, 0);
             this.panel2.Controls.SetChildIndex(this.addTest, 0);
             this.panel2.Controls.SetChildIndex(this.deleteQ, 0);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(89, 11);
+            this.label1.Size = new System.Drawing.Size(856, 24);
             // 
             // questionField
             // 
@@ -140,7 +140,6 @@
             this.panel4.Size = new System.Drawing.Size(979, 49);
             this.panel4.TabIndex = 11;
             this.panel4.Click += new System.EventHandler(this.panel4_Click);
-            this.panel4.Enter += new System.EventHandler(this.panel4_Enter);
             // 
             // addAnswer
             // 

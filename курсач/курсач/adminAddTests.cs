@@ -86,7 +86,7 @@ namespace курсач
             bp.Size = panel4.Size;
             bp.BorderStyle = panel4.BorderStyle;
             bp.BackColor = panel4.BackColor;
-            bp.Enter += new EventHandler(this.panel4_Enter);
+            //bp.Enter += new EventHandler(this.panel4_Enter);
 
             Button add = new Button();
             add.Location = addAnswer.Location;
@@ -160,7 +160,7 @@ namespace курсач
         {
 
             var panel = flowLayoutPanel1.Controls[panelN];
-            MessageBox.Show(panel.Controls.Count.ToString());
+            //MessageBox.Show(panel.Controls.Count.ToString());
             if (panel.Controls.Count > 5)
             {
                 panel.Controls.RemoveAt(panel.Controls.Count - 1);
@@ -173,20 +173,20 @@ namespace курсач
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int countQ = 0;
-            var panel = flowLayoutPanel1.Controls[panelN];
-            foreach (Control h in panel.Controls)
-            {
-                if (h.GetType() == typeof(RadioButton))
-                {
-                    countQ++;
-                }
-            }
+            //int countQ = 0;
+            //var panel = flowLayoutPanel1.Controls[panelN];
+            //foreach (Control h in panel.Controls)
+            //{
+            //    if (h.GetType() == typeof(RadioButton))
+            //    {
+            //        countQ++;
+            //    }
+            //}
 
-            for (int i = 0; i < countQ; i++)
-            {
-                spaceBetweenQ = textBox2.Location.Y + 50 + (i * 50);
-            }
+            //for (int i = 0; i < countQ; i++)
+            //{
+            //    spaceBetweenQ = textBox2.Location.Y + 50 + (i * 50);
+            //}
 
         }
 
@@ -237,7 +237,7 @@ namespace курсач
             List<string> pAnswers = new List<string>();
             List<string> allAnswers = new List<string>();
 
-            Test_correct_answer tca = new Test_correct_answer();
+            The_Test tca = new The_Test();
             tca.Test_name = label1.Text;
             tca.Name_of_PU = selectedItem;
             string k2 = "";
@@ -270,7 +270,7 @@ namespace курсач
             MessageBox.Show(k2);
 
             tca.Correct_answers = k2;
-            db.Test_correct_answers.Add(tca);
+            db.The_Test.Add(tca);
             try
             {
                 db.SaveChanges();
@@ -324,14 +324,14 @@ namespace курсач
             }
 
 
-            Test test = new Test();
+            Question test = new Question();
             foreach (var a in questions)
             {
-                test.Name_of_PU = selectedItem;
+                //test.Name_of_PU = selectedItem;
                 test.Test_name = label1.Text;
-                test.Question = questions[num];
+                test.Question1 = questions[num];
                 test.Answers = allAnswers[num];
-                db.Tests.Add(test);
+                db.Questions.Add(test);
                 try
                 {
                     db.SaveChanges();
@@ -382,11 +382,6 @@ namespace курсач
             //    }
             //}
             //questionPanel.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        private void panel4_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void panel4_Click(object sender, EventArgs e)

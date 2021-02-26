@@ -58,6 +58,13 @@ namespace курсач
                 usr.ProfilePic = image;
                 db.Users.Add(usr);
 
+                //if (usr.Role == "student")
+                //{
+                //    Student_profile student = new Student_profile();
+                //    student.Student_login = usr.Login;
+                //    db.Student_profile.Add(student);
+                //}
+
                 try
                 {
                     db.SaveChanges();
@@ -296,6 +303,11 @@ namespace курсач
         {
             Close();
             previousForm.Show();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
